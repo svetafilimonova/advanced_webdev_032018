@@ -16,6 +16,7 @@ const webpackConfig = require('./webpack.config.js');
 const autoprefixer = require('gulp-autoprefixer');
 const svgSprite = require("gulp-svg-sprites");
 const plumber = require('gulp-plumber');
+const normalize = require('node-normalize-scss');
 
 
 const paths = {
@@ -51,7 +52,9 @@ function styles() {
     return gulp.src('./src/styles/app.scss')
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass({
+            includePaths: require('node-normalize-scss').includePaths,
+            outputStyle: 'compressed'}))
         .pipe(sourcemaps.write())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -110,6 +113,6 @@ exports.sprite = sprite;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts),
+    gulp.parallel(styles, templates, images, scripts,sprite),
     gulp.parallel(watch, server)
 ));

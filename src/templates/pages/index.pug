@@ -4,10 +4,27 @@ block variables
     - var title = 'Добро пожаловать'
 
 block content
-    h1 Главная мышь мышня
-    form
-        label(for="email") email
-        input(name="email" id="email")
-        label(for="password") password
-        input(name="password" id="password")
-        button Войти
+    .intro__wrapper
+        div.btn-block
+            a.auth-btn(href="#") Авторизоваться
+        main.intro-block
+            .container.container_intro
+                .about
+                    .about__pic
+                    .about__info
+                        .about__info-name Светлана Филимонова
+                        .about__info-txt   Личный сайт веб разработчика
+                    .about__socials
+                        include ../common/socials.pug
+                    .about__menu
+                        ul.menu
+                            li.menu__item
+                                a.menu__link(href='/my-works.html') Мои работы
+                            li.menu__item
+                                a.menu__link(href='/about.html') Обо мне 
+                            li.menu__item
+                                a.menu__link(href='/blog.html') Блог
+        footer.intro-footer
+            .container.container_intro
+                .footer__copyright
+                    p © Владимир Астахов | создано с любовью в LoftSchool | 2016

@@ -11,20 +11,39 @@
     <script src="assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <h1>Главная мышь мышня</h1>
-    <form>
-      <label for="email">email</label>
-      <input name="email" id="email">
-      <label for="password">password</label>
-      <input name="password" id="password">
-      <button>Войти</button>
-    </form>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="/index.html">Главная</a></li>
-      <li><a href="/about.html">Обо мне</a></li>
-      <li><a href="my-works.html">Мои работы</a></li>
-      <li><a href="blog.html">Блог</a></li>
-    </ul>
+    <div class="intro__wrapper">
+      <div class="btn-block"><a class="auth-btn" href="#">Авторизоваться</a></div>
+      <main class="intro-block">
+        <div class="container container_intro">
+          <div class="about">
+            <div class="about__pic"></div>
+            <div class="about__info">
+              <div class="about__info-name">Светлана Филимонова</div>
+              <div class="about__info-txt">  Личный сайт веб разработчика</div>
+            </div>
+            <div class="about__socials">
+              <ul class="socials">
+                <li class="socials__items"><a class="socials__link socials__link-vk" href="#"> </a></li>
+                <li class="socials__items"><a class="socials__link socials__link-gh" href="#"> </a></li>
+              </ul>
+            </div>
+            <div class="about__menu">
+              <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="/my-works.html">Мои работы</a></li>
+                <li class="menu__item"><a class="menu__link" href="/about.html">Обо мне </a></li>
+                <li class="menu__item"><a class="menu__link" href="/blog.html">Блог</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="intro-footer">
+        <div class="container container_intro">
+          <div class="footer__copyright">
+            <p>© Владимир Астахов | создано с любовью в LoftSchool | 2016</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

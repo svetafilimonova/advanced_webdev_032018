@@ -1,10 +1,27 @@
 body{
-    margin: 100px;
-    background: #ccc;
-    transform: initial;
-    transition: linear;
-    display: flex;
+height: 100%;
+width: 100%;
+padding: 0;
+margin: 0;
 }
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+} 
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@import "normalize";
 @import 'common/menu';
+@import 'index';
 @import 'common/technologies';
 @import 'common/slider';
