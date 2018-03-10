@@ -13,6 +13,11 @@ const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
+const autoprefixer = require('gulp-autoprefixer');
+const svgSprite = require("gulp-svg-sprites");
+const plumber = require('gulp-plumber');
+
+
 const paths = {
     root: './build',
     templates: {
@@ -36,6 +41,7 @@ const paths = {
 // pug
 function templates() {
     return gulp.src(paths.templates.pages)
+        .pipe(plumber())
         .pipe(pug({ pretty: true }))
         .pipe(gulp.dest(paths.root));
 }
@@ -43,13 +49,23 @@ function templates() {
 // scss
 function styles() {
     return gulp.src('./src/styles/app.scss')
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(sourcemaps.write())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest))
 }
-
+//svg-sprite
+function sprite () {
+    return gulp.src('src/images/icons/*.svg')
+    .pipe(svgSprite())
+    .pipe(gulp.dest(paths.root));
+}
 // очистка
 function clean() {
     return del(paths.root);
@@ -61,6 +77,7 @@ function scripts() {
         .pipe(gulpWebpack(webpackConfig, webpack)) 
         .pipe(gulp.dest(paths.scripts.dest));
 }
+
 
 // галповский вотчер
 function watch() {
@@ -88,6 +105,8 @@ exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
+exports.sprite = sprite;
+
 
 gulp.task('default', gulp.series(
     clean,

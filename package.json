@@ -1,5 +1,5 @@
 {
-  "name": "gulp-webpack-2018-dima",
+  "name": "my_portfolio_2018",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -10,16 +10,26 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "ajv": "^6.2.1",
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-plumber": "^1.2.0",
     "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
+    "gulp-svg-sprites": "^4.1.2",
     "gulp-webpack": "^1.5.0",
     "uglifyjs-webpack-plugin": "^1.0.0-beta.2",
-    "webpack": "^4.1.0"
+    "webpack": "^4.1.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ajv-keywords": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svetafilimonova/advanced_webdev_032018.git"
+  }
 }

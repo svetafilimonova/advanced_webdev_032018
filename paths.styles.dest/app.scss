@@ -1,8 +1,12 @@
 body{
     margin: 100px;
     background: #ccc;
+    -webkit-transform: initial;
     transform: initial;
+    -webkit-transition: linear;
     transition: linear;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 @import 'common/menu';
