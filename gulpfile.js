@@ -19,7 +19,7 @@ const plumber = require('gulp-plumber');
 const normalize = require('node-normalize-scss');
 
 
-const paths = {
+const PATHS = {
     root: './build',
     templates: {
         pages: 'src/templates/pages/*.pug',
@@ -27,7 +27,7 @@ const paths = {
     },
     styles: {
         src: 'src/styles/**/*.scss',
-        dest: 'build/assets/styles/'
+        dest: 'build/assets/styles'
     },    
     images: {
         src: 'src/images/**/*.*',
@@ -41,10 +41,10 @@ const paths = {
 
 // pug
 function templates() {
-    return gulp.src(paths.templates.pages)
+    return gulp.src(PATHS.templates.pages)
         .pipe(plumber())
         .pipe(pug({ pretty: true }))
-        .pipe(gulp.dest(paths.root));
+        .pipe(gulp.dest(PATHS.root));
 }
 
 // scss
@@ -61,47 +61,50 @@ function styles() {
             cascade: false
         }))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(paths.styles.dest))
+        .pipe(gulp.dest(PATHS.styles.dest))
 }
 //svg-sprite
 function sprite () {
     return gulp.src('src/images/icons/*.svg')
-    .pipe(svgSprite())
-    .pipe(gulp.dest(paths.root));
+    .pipe(svgSprite({
+        mode: "symbols",
+        preview: false
+    }))
+    .pipe(gulp.dest(PATHS.root));
 }
 // очистка
 function clean() {
-    return del(paths.root);
+    return del(PATHS.root);
 }
 
 // webpack
 function scripts() {
     return gulp.src('src/scripts/app.js')
         .pipe(gulpWebpack(webpackConfig, webpack)) 
-        .pipe(gulp.dest(paths.scripts.dest));
+        .pipe(gulp.dest(PATHS.scripts.dest));
 }
 
 
 // галповский вотчер
 function watch() {
-    gulp.watch(paths.styles.src, styles);
-    gulp.watch(paths.templates.src, templates);
-    gulp.watch(paths.images.src, images);
-    gulp.watch(paths.scripts.src, scripts);
+    gulp.watch(PATHS.styles.src, styles);
+    gulp.watch(PATHS.templates.src, templates);
+    gulp.watch(PATHS.images.src, images);
+    gulp.watch(PATHS.scripts.src, scripts);
 }
 
 // локальный сервер + livereload (встроенный)
 function server() {
     browserSync.init({
-        server: paths.root
+        server: PATHS.root
     });
-    browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
+    browserSync.watch(PATHS.root + '/**/*.*', browserSync.reload);
 }
 
 // просто переносим картинки
 function images() {
-    return gulp.src(paths.images.src)
-        .pipe(gulp.dest(paths.images.dest));
+    return gulp.src(PATHS.images.src)
+        .pipe(gulp.dest(PATHS.images.dest));
 }
 
 exports.templates = templates;
