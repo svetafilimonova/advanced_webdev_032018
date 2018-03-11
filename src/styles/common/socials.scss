@@ -12,8 +12,19 @@
     height: 21px;
     fill: #70d1c6;
 
+    &:hover {
+        fill: #00bfa5;  
+    }
+
 }
 
 #github {
     fill: #70d1c6;  
+}
+
+.socials__icon-svg {
+    fill: #70d1c6; 
+    &:hover {
+        fill: #00bfa5;  
+    }
 }

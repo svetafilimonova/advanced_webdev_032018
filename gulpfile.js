@@ -14,9 +14,13 @@ const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
 const autoprefixer = require('gulp-autoprefixer');
-const svgSprite = require("gulp-svg-sprites");
 const plumber = require('gulp-plumber');
 const normalize = require('node-normalize-scss');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
+// const svgSprite = require('gulp-svg-sprite');
+const svgSprite = require("gulp-svg-sprites");
 
 
 const PATHS = {
@@ -65,12 +69,54 @@ function styles() {
 }
 //svg-sprite
 function sprite () {
+    // return gulp.src('src/images/icons/*.svg')
+    // .pipe(svgmin({
+    //     js2svg: {
+    //       pretty: true
+    //     }
+    //   }))
+    //   .pipe(cheerio({
+    //     run: function($, file) {
+    //       $('[fill]').removeAttr('fill');
+    //       $('[stroke]').removeAttr('stroke');
+    //       $('[style]').removeAttr('style');
+    //     },
+    //     parserOptions: { 
+    //         xmlMode: true 
+    //     }
+    //   }))
+    //   .pipe(replace('&gt;', '>'))
+    //   .pipe(svgSprite({
+    //     mode: {
+    //         mode: "symbols",
+    //         preview: false,
+    //     }
+    //   }))
+    // .pipe(gulp.dest(PATHS.root));
+
+// работает но плохо
+
     return gulp.src('src/images/icons/*.svg')
     .pipe(svgSprite({
         mode: "symbols",
         preview: false
     }))
     .pipe(gulp.dest(PATHS.root));
+
+        // return gulp.src('src/images/icons/*.svg')
+        // .pipe(cheerio({
+        //         run: function($) {
+        //           $('[fill]').removeAttr('fill');
+        //           $('[stroke]').removeAttr('stroke');
+        //           $('[style]').removeAttr('style');
+        //         },
+        //         parserOptions: { xmlMode: true }
+        //       }))
+        // .pipe(svgSprite({
+        // mode: "symbols",
+        // preview: false
+        // }))
+        // .pipe(gulp.dest(PATHS.root));
 }
 // очистка
 function clean() {
