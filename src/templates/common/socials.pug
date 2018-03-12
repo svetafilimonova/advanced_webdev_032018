@@ -1,13 +1,7 @@
-ul.socials
-    li.socials__item
-        a.socials__link.socilals__link-vk(href="https://vk.com/sshvedova2013")
-            svg.socials__icon
-                use.socials__icon-svg.socials__icon-vk(xlink:href="svg/symbols.svg#vk")
-    li.socials__item
-        a.socials__link.socilals__link-git(href="https://github.com/svetafilimonova")
-            svg.socials__icon
-                use.socials__icon-svg.socials__icon-git(xlink:href="svg/symbols.svg#github")
-    li.socials__item
-        a.socials__link.socilals__link-tg(href="#")
-            svg.socials__icon 
-                use.socials__icon-svg.socials__icon-tg(xlink:href="svg/symbols.svg#telegram_logo")
+mixin socials(className, icons, links)
+    ul.socials
+        li.socials__item
+            each icon, i in icons
+                a(class=`socials__link socials__link-${icon}` href=`${links[i]}`)
+                    svg(class=`socials__icon ${className}`)
+                        use(class=`socials__icon-svg socials__icon-${icon}`)(xlink:href=`svg/symbols.svg#${icon}`)

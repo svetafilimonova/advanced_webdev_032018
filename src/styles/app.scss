@@ -20,10 +20,20 @@ ul {
     padding: 0;
 }
 
+$seagreen: #00bfa5;
+$paleSeagreen: #70d1c6;
+$lightSeagreen: lighten(#00bfa5, 2%);
+$darkSeagreen: #009688;
+$btnSgreen: #0a8e86;
+
+
+
+
 @import 'normalize';
-@import 'index';
 @import 'fonts';
+@import 'index';
 @import 'common/menu';
 @import 'common/socials';
+@import 'common/greenbtns';
 @import 'common/technologies';
 @import 'common/slider';

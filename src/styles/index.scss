@@ -15,11 +15,13 @@
     max-width: 457px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .btn-block {
     display: flex;
     justify-content: flex-end;
+    flex-shrink: 0;
 }
 
 .auth-btn {
@@ -40,6 +42,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-bottom: 100px;
     // align-self: center;
     // justify-self: center;
 
@@ -66,12 +69,12 @@
 
 .about__info-name {
     font-size: 28px;
-    font-family: 'RobotoMedium';
+    font-family: $RobotoMed;
 }
 
 .about__info-txt {
     font-size: 16px; 
-    font-family: 'RobotoRegular';
+    font-family: $RobotoReg;
     
 } 
 
@@ -79,4 +82,11 @@
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+}
+
+.footer__copyright {
+    font-size: 16px;
+    color: #ffff;
+    font-family: $RobotoL;
+    text-align: center;
 }

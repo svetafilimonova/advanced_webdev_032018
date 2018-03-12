@@ -63,11 +63,11 @@ function styles() {
         .pipe(sass({
             includePaths: require('node-normalize-scss').includePaths,
             outputStyle: 'compressed'}))
-        .pipe(sourcemaps.write())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
+        .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(PATHS.styles.dest))
 }

@@ -1,4 +1,6 @@
 extends ../template
+include ../common/greenbtns.pug
+include ../common/socials.pug
 
 block variables
     - var title = 'Добро пожаловать'
@@ -15,16 +17,14 @@ block content
                         .about__info-name Светлана Филимонова
                         .about__info-txt   Личный сайт веб разработчика
                     .about__socials
-                        include ../common/socials.pug
+                        +socials('socials__icon_green', ['vk','github', 'telegram_logo'], ['https://vk.com/sshvedova2013','https://github.com/svetafilimonova','https://t.me/lana_feels'])
                     .about__menu
-                        ul.menu
-                            li.menu__item
-                                a.menu__link(href='/my-works.html') Мои работы
-                            li.menu__item
-                                a.menu__link(href='/about.html') Обо мне 
-                            li.menu__item
-                                a.menu__link(href='/blog.html') Блог
+                        +buttons(["Мои работы", 'Обо мне', 'Блог'], ['my-works', 'about','blog'])
+                .about.about-auth
+                    .header.about-auth__header Авторизуйтесь
+                    form.about-auth__form(action="#")
+                    +buttons(["На главную", 'Войти'], ['about','blog'])
         footer.intro-footer
-            .container.container_intro
+            .container
                 .footer__copyright
-                    p © Владимир Астахов | создано с любовью в LoftSchool | 2016
+                    p © Светлана Филимонова | создано с любовью в LoftSchool | 2016
