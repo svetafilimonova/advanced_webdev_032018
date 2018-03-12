@@ -19,8 +19,8 @@ const normalize = require('node-normalize-scss');
 const svgmin = require('gulp-svgmin');
 const cheerio = require('gulp-cheerio');
 const replace = require('gulp-replace');
-// const svgSprite = require('gulp-svg-sprite');
-const svgSprite = require("gulp-svg-sprites");
+const svgSprite = require('gulp-svg-sprite');
+// const svgSprite = require("gulp-svg-sprites");
 
 
 const PATHS = {
@@ -73,39 +73,37 @@ function styles() {
 }
 //svg-sprite
 function sprite () {
-    // return gulp.src('src/images/icons/*.svg')
-    // .pipe(svgmin({
-    //     js2svg: {
-    //       pretty: true
-    //     }
-    //   }))
-    //   .pipe(cheerio({
-    //     run: function($, file) {
-    //       $('[fill]').removeAttr('fill');
-    //       $('[stroke]').removeAttr('stroke');
-    //       $('[style]').removeAttr('style');
-    //     },
-    //     parserOptions: { 
-    //         xmlMode: true 
-    //     }
-    //   }))
-    //   .pipe(replace('&gt;', '>'))
-    //   .pipe(svgSprite({
-    //     mode: {
-    //         mode: "symbols",
-    //         preview: false,
-    //     }
-    //   }))
-    // .pipe(gulp.dest(PATHS.root));
-
-
-
     return gulp.src('src/images/icons/*.svg')
-    .pipe(svgSprite({
-        mode: "symbols",
-        preview: false
-    }))
-    .pipe(gulp.dest(PATHS.root));
+    .pipe(svgmin({
+        js2svg: {
+          pretty: true
+        }
+      }))
+      .pipe(cheerio({
+        run: function($, file) {
+          $('[fill]').removeAttr('fill');
+          $('[stroke]').removeAttr('stroke');
+          $('[style]').removeAttr('style');
+        }
+      }))
+      .pipe(replace('&gt;', '>'))
+      .pipe(svgSprite({
+          mode: {
+            symbol: {
+              sprite: "../sprite.svg"
+            }
+          }
+      }))
+    .pipe(gulp.dest(PATHS.images.dest));
+
+
+// Working!!!!
+    // return gulp.src('src/images/icons/*.svg')
+    // .pipe(svgSprite({
+    //     mode: "symbols",
+    //     preview: false
+    // }))
+    // .pipe(gulp.dest(PATHS.root));
 
         // return gulp.src('src/images/icons/*.svg')
         // .pipe(cheerio({

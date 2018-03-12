@@ -3,8 +3,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 100vh;
-    min-height: 650px;
+    // height: 100vh;
+    min-height: 100%;
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
