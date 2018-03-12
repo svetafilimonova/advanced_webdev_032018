@@ -98,7 +98,7 @@ function sprite () {
     //   }))
     // .pipe(gulp.dest(PATHS.root));
 
-// работает но плохо
+
 
     return gulp.src('src/images/icons/*.svg')
     .pipe(svgSprite({
@@ -122,7 +122,7 @@ function sprite () {
         // }))
         // .pipe(gulp.dest(PATHS.root));
 }
-// очистка
+// clean build folder
 function clean() {
     return del(PATHS.root);
 }
@@ -135,7 +135,7 @@ function scripts() {
 }
 
 
-// галповский вотчер
+
 function watch() {
     gulp.watch(PATHS.styles.src, styles);
     gulp.watch(PATHS.templates.src, templates);
@@ -143,7 +143,7 @@ function watch() {
     gulp.watch(PATHS.scripts.src, scripts);
 }
 
-// локальный сервер + livereload (встроенный)
+
 function server() {
     browserSync.init({
         server: PATHS.root
@@ -151,13 +151,13 @@ function server() {
     browserSync.watch(PATHS.root + '/**/*.*', browserSync.reload);
 }
 
-// просто переносим картинки
+
 function images() {
     return gulp.src(PATHS.images.src)
         .pipe(gulp.dest(PATHS.images.dest));
 }
 
-// перенос шрифтов
+
 function fonts() {
     return gulp.src(PATHS.fonts.src)
     .pipe(gulp.dest(PATHS.fonts.dest));
