@@ -1,14 +1,14 @@
-.intro__wrapper {
+.wrapper_intro {
     background-image: url(../images/img/mount.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     // height: 100vh;
     min-height: 100%;
-    overflow: hidden; 
+    // overflow: hidden; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
 
 }
 
@@ -23,6 +23,8 @@
     display: flex;
     justify-content: flex-end;
     flex-shrink: 0;
+    margin-bottom: 50px;
+    padding: 50px 50px;
 }
 
 .auth-btn {
@@ -30,26 +32,27 @@
     color: #fff;
     border-radius: 5px;
     border: 1px solid #fff;
-    padding: 14px 15px;
-    margin-top: 37px;
-    margin-right: 50px;
+    padding: 10px 25px;
+    // margin-top: 37px;
+    // margin-right: 50px;
 }
 
 
-.about {
+.welcome {
     background-color: rgba(252, 252, 252, 0.8);
     width: 380px;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin-bottom: 100px;
+    position: relative;
+    // margin-bottom: 100px;
     // align-self: center;
     // justify-self: center;
 
 }
 
-.about__pic {
+.welcome__pic {
     background-image: url(../images/photo/me.JPG);
     background-size: cover;
     background-position: center center;
@@ -62,24 +65,24 @@
 
 }
 
-.about__info {
+.welcome__info {
     color: #455a64;
     text-align: center;
     margin-bottom: 30px;
 }
 
-.about__info-name {
+.welcome__info-name {
     font-size: 28px;
     font-family: $RobotoMed;
 }
 
-.about__info-txt {
+.welcome__info-txt {
     font-size: 16px; 
     font-family: $RobotoReg;
     
 } 
 
-.about__socials {
+.welcome__socials {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
@@ -90,4 +93,134 @@
     color: #ffff;
     font-family: $RobotoL;
     text-align: center;
+}
+
+.welcome-auth__header {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.auth-form__icon {
+    width: 46px;
+    height: 46px;
+    background-color: #f0efe9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px 0 0 8px;
+    flex-shrink: 0;
+}
+
+.auth-form__label {
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+
+.auth-form__icon-svg {
+    fill: $lightgrey
+}
+
+.auth-form__input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 13px 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+.auth-form__input::-webkit-input-placeholder {
+    color: #aeb0b1;
+}
+.auth-form__row {
+    margin-bottom: 20px;
+}
+
+.auth-form {
+    width: 90%;
+    margin: 0 auto;
+    color: $fontgrey;
+    // color: $darkgrey;
+}
+
+.auth-form__controls {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-form__check-fake {
+    width: 20px;
+    height: 20px;
+    background-color:$seagreen;
+    position: relative;
+    border-radius: 5px;
+    margin-right: 10px;
+
+    &:after {
+        @include pseudo-elem(21px, 21px, transparent, none);
+        background-image: url(../images/img/tick.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+}
+
+.auth-form__check:checked + .auth-form__check-fake:after {
+    display: block;
+}
+
+.auth-form__check {
+    display: none;
+}
+
+.auth-form__controls-row {
+    margin-bottom: 15px;
+}
+
+.auth-form__radio-head {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.auth-form__radios {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.auth-form__controls-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.auth-form__radio-fake {
+    @include pseudo-elem(20px, 20px, #fff, block);
+    border-radius: 50%;
+    border: 1px solid $lightgrey;
+    position: relative;
+    margin-right: 7px;
+
+    &:after {
+        @include pseudo-elem(8px, 8px, $seagreen, none);
+        border-radius: 50%;
+        position: absolute;
+        top:5px;
+        left:5px;
+    }
+}
+
+.auth-form__radio {
+    display: none;
+}
+.auth-form__radio:checked + .auth-form__radio-fake::after {
+    display: block;
+}
+
+.auth-form__radio:checked ~ .auth-form__radio-text {
+    color: $seagreen;
 }

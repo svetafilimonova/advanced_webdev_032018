@@ -10,11 +10,16 @@
 .socials__item {
     display: inline-block;
     margin-right: 20px;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .socials__icon {
     width: 34px;
     height: 21px;
+    // margin-right: 25px;
 
 
 }

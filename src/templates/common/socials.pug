@@ -1,7 +1,7 @@
 mixin socials(className, icons, links)
     ul.socials
-        li.socials__item
-            each icon, i in icons
+        each icon, i in icons
+            li.socials__item
                 a(class=`socials__link socials__link-${icon}` href=`${links[i]}`)
-                    svg(class=`socials__icon ${className}`)
-                        use(class=`socials__icon-svg socials__icon-${icon}`)(xlink:href=`../assets/images/sprite.svg#${icon}`)
+                    svg(class=`socials__icon ${className}` style={width: '35px', height: '25px'})
+                        use(class=`socials__icon-svg socials__icon-${icon}` xlink:href=`../assets/images/sprite.svg#${icon}`)
