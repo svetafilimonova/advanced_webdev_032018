@@ -1,8 +1,10 @@
 extends ../template
+include ../common/header
 
 block variables
     - var title = 'Обо мне'
 
 block content
-    h1 Обо мне
-    include ../common/technologies.pug
+    +header("about", "Светлана Филимонова", "Личный сайт веб разработчика", true)
+   
+    

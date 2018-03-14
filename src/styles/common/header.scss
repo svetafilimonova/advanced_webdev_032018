@@ -1,0 +1,63 @@
+.header {
+    background-image: url(../images/img/header.jpg);
+    @extend %bgpicture;
+}
+
+
+.header__welcome {
+    background-color: transparent;
+}
+
+.hamburger-menu {
+    cursor:pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.hamburger-btn {
+   display: block;
+   width: 40px;
+   height: 6px;
+   border-radius: 2px;
+   background-color: #fff;
+   position: relative;
+  
+   
+   &:before, &:after {
+    @include pseudo-elem(40px, 6px, #fff, block);
+    border-radius: 2px;
+    position: absolute;
+   }
+   &:before {
+    top: 12px; 
+   }
+
+   &:after {
+    top: 24px;
+   }
+}
+
+.header__info_about {
+    color: #fff;
+}
+
+.header__arrow-icon {
+    fill: #fff;
+    opacity: .5;
+    transition: .3s;
+    cursor:pointer;
+
+    &:hover{
+    opacity: 1;
+    }
+}
+
+.header__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__row_top {
+    justify-content: space-between;
+}
