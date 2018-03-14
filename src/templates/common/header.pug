@@ -1,6 +1,6 @@
 include ../common/socials.pug
 
-mixin header(pageName, header, text, arrow)
+mixin header(pageName, header, text, iconName, arrow)
     header.header
         .header__row.header__row_top
             .header__row-right
@@ -8,13 +8,19 @@ mixin header(pageName, header, text, arrow)
             .header__row-left
                 .hamburger-menu
                     .hamburger-btn
-        .header__row
-            .welcome.header__welcome
+        .header__row.header__row-welcome
+            div(class= `welcome header__welcome header__welcome_${pageName}`)
                 .welcome__pic.header__photo
                 div(class= `welcome__info header__info_${pageName}`)
                     div(class= `welcome__info-name welcome__info-name_${pageName}`)=header
                     div(class= `welcome__info-txt welcome__info-txt_${pageName}`)=text
-        .header__row
+            svg(class=`header__bg-icon header__bg-icon_${iconName}` style={width: '1175.495px', height: '313.961px'})
+                use(class=`header__icon_${iconName}` xlink:href=`assets/images/sprite.svg#${iconName}`)
+        .header__row.header__row-arrow
             if arrow
                 svg(class="header__arrow-icon" style={width: '27px', height: '18px'})
                     use(class="header__arrow-svg" xlink:href="../assets/images/sprite.svg#arrow_down")
+        .header__row-triangles
+            svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class=`header__traingles header__traingles_${pageName}`)
+                polygon(class = `header__traingle-left header__traingle-left_${pageName}` points="0,0   0,86   500.8,86   500.8,75.5")
+                polygon(class = `header__traingle-right header__traingle-right_${pageName}` points="1000,0   1000,86   500,86   500,75.5")

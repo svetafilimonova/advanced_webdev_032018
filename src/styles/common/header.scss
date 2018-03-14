@@ -1,11 +1,26 @@
 .header {
     background-image: url(../images/img/header.jpg);
     @extend %bgpicture;
+    position: relative;
 }
 
 
 .header__welcome {
     background-color: transparent;
+    z-index: 50;
+    // background-image: url(../images/icons/portfolio_header.svg);
+}
+
+.header__bg-icon {
+    fill: white;
+    fill-opacity: .1;
+    position: absolute;
+    width: 100%;
+    
+}
+
+.header__icon_portfolio_header {
+    width: 100%;
 }
 
 .hamburger-menu {
@@ -43,7 +58,7 @@
 
 .header__arrow-icon {
     fill: #fff;
-    opacity: .5;
+    opacity: .7;
     transition: .3s;
     cursor:pointer;
 
@@ -56,8 +71,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .header__row_top {
     justify-content: space-between;
+    padding: 35px 25px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+
+
+.header__traingles {
+    display: block;
+}
+
+.header__traingle-left_about {
+    fill: #efeee9;
+}
+
+.header__traingle-right_about {
+    fill: #eeebdf;
+}
+
+.header__row-welcome {
+    margin-bottom: 50px;
+}
+
+.header__row-arrow {
+    position: absolute;
+    top: 85%;
+    right: 49%;
 }
