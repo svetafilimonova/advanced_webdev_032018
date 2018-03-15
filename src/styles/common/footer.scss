@@ -1,0 +1,36 @@
+.footer--pages {
+    background-color: rgba(black, .6);
+    height: 145px;
+}
+
+.footer__row {
+    display: flex;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    
+}
+
+.footer__col {
+    width: 50%;
+}
+
+.footer__col--right {
+    display: flex;
+   justify-content: flex-end;
+  
+}
+
+.footer__row--top {
+    padding: 16px 30px 20px 30px;
+}
+
+.footer__row--bottom {
+    padding: 13px 30px 12px 30px;
+}
+
+.footer__col-text {
+    font-family: $RobotoL;
+    color: rgba(#fff, .6);
+    font-size: 16px;
+}

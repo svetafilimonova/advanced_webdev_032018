@@ -1,0 +1,17 @@
+.nav-menu__item {
+    display: inline-block;
+    margin-right: 40px; 
+}
+
+.nav-menu__link {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    font-family: $RobotoMed;
+    transition: .3s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+

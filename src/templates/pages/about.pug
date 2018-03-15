@@ -5,6 +5,8 @@ block variables
     - var title = 'Обо мне'
 
 block content
-    +header("about", "Светлана Филимонова", "Личный сайт веб разработчика", 'portfolio_header', true)
+    .wrapper.wrapper--pages.wrapper--about
+        +header("about", "Светлана Филимонова", "Личный сайт веб разработчика", 'portfolio_header', true)
+    include ../common/footer
    
     

@@ -41,6 +41,8 @@ font-size: 16px;
 
 html,body {
     height: 100%;
+    min-height: 100%;
+    // overflow: hidden;
 }
 
 h1,
@@ -91,9 +93,23 @@ p {
     }
 }
 
+.wrapper--pages {
+    min-height: 100%;
+    &:after {
+        content: '';
+        display: block;
+        height: 145px;
+    }
+}
+
 .footer {
     height: 70px;
     margin-top: -70px;
+}
+
+.footer--pages {
+    height: 145px;
+    margin-top: -145px;
 }
 
 .title {
@@ -136,6 +152,8 @@ p {
 @import 'index';
 @import 'common/menu';
 @import 'common/header';
+@import 'common/footer';
+@import 'common/nav-menu';
 @import 'common/socials';
 @import 'common/greenbtns';
 @import 'common/technologies';
