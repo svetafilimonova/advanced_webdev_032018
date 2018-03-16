@@ -13,6 +13,7 @@ $lightgrey: #c5cbcd;
 $fontgrey: #6e7d84;
 
 
+
 @mixin pseudo-elem($width, $height, $bgcolor, $display) {
     content: "";
     display: $display;
@@ -154,6 +155,7 @@ p {
 @import 'common/header';
 @import 'common/footer';
 @import 'common/nav-menu';
+@import 'common/about';
 @import 'common/socials';
 @import 'common/greenbtns';
 @import 'common/technologies';

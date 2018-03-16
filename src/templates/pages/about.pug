@@ -3,10 +3,44 @@ include ../common/header
 
 block variables
     - var title = 'Обо мне'
+    -var skills = [["Html", "Css",'JavaScrpt'], ["Git", "Gulp"]]
 
 block content
     .wrapper.wrapper--pages.wrapper--about
         +header("about", "Светлана Филимонова", "Личный сайт веб разработчика", 'portfolio_header', true)
+        section.about.section--about
+            .about__col.about__col--left
+                .about__title
+                    svg(class="about__title-icon" style={width: '358px', height: '125px'})
+                        use.about__title-svg(xlink:href='../assets/images/sprite.svg#about_header')
+                    h1.title.title-bigger.title_dark.about__title-text Обо мне
+                .about__user-info
+                    .about__avatar
+                        img.about__img(style={width: '450px', 'background-image':'url("assets/images/photo/me.JPG")'})
+                    .about__info
+                        .about__info-title
+                            h2.title Кто я
+                        .about__info-text
+                            p Я веб разработчик из Рязани. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                            p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .about__col.about__col--right
+                .about__title
+                    h2.title.title-smaller Чем я могу быть вам полезен
+                .about__description
+                    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                .about__skills
+                    ul.skills-list
+                        each item, ind in ["Frontend", "Workflow"]
+                            li.skills-list__item= item
+                                ul.skills-row
+                                    each skill in skills[ind]
+                                        li.skills-row__item
+                                            svg(class=`skills-row__circles skills-row__circles-${skill}` style={width: '122px', height: '122px'})
+                                                circle.skills-row__item-circle--inner(class=`skills-row__circle-inner skills-row__circle-inner--${skill}` r="50" cx="61" cy="61" stroke="#ccc" fill="none" transform="rotate(-90 61 61)")
+                                                circle.skills-row__item-circle--outer(class=`skills-row__circle-outer skills-row__circle-outer--${skill}`
+                                                r="50" cx="61" cy="61" stroke="#00bfa5" fill="none" transform="rotate(-90 61 61)")
+                                            span.skills-row__item-text= skill
+        section.map.section_map
     include ../common/footer
    
     

@@ -1,0 +1,100 @@
+.about {
+    display: flex;
+}
+
+.about__col {
+    width: 50%;
+}
+.about__col--left {
+    background-color: #efeee9;
+    // display: flex;
+}
+
+.about__col--right {
+    background-color: #eeebdf; 
+    padding: 0 20px 0 40px;
+}
+.about__title-text {
+    position: absolute;
+    top: 27%;
+    right: 30%;
+}
+
+.about__title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.about__title-icon {
+    fill: #e6e5e0;
+}
+
+.about__avatar {
+    width: 450px;
+    height: 390px;
+    margin-bottom: 38px;
+}
+
+.about__img {
+    height: 100%;
+    @extend %bgpicture;
+}
+
+.about__info {
+    color: $darkgrey;
+}
+
+.about__info-title {
+    margin-bottom: 28px;
+}
+.about__user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__info {
+    width: 65%;
+    margin-bottom: 38px;
+}
+
+.about__info-text p {
+    margin-bottom: 10px
+}
+
+.skills-list__item {
+    font-size: 26px;
+    font-family: $RobotoMed;
+    color: $darkgrey;
+}
+.skills-row__item {
+    display: inline-block;
+    position: relative;
+}
+.skills-row__item-text {
+    color: $seagreen;
+    font-size: 14px;
+    font-family: $RobotoMed;
+    position: absolute;
+    top: 40%;
+    right: 41%;
+}
+
+.skills-row__circles  {
+    stroke-width: 20px;
+}
+
+.skills-row__circle-outer  {
+    stroke-dasharray: 314;
+    stroke-dashoffset: 170; 
+}
+
+.skills-row__circle-outer--Html {
+    stroke-dashoffset: 78; 
+}
+
+.skills-row__circle-outer--Css {
+    stroke-dashoffset: 70; 
+}
