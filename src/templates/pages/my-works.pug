@@ -1,8 +1,73 @@
 extends ../template
+include ../common/header
 
 block variables
     - var title = 'Мои работы'
 
 block content
-    h1 Мои работы
-    include ../common/slider.pug
+    .wrapper--pages.wrapper--about
+        +header("about", "Светлана Филимонова", "Личный сайт веб разработчика", 'portfolio_header', true)
+        section.works.section--works
+            .works__title
+                svg(class="works__title-icon" style={width: '490px', height: '157px'})
+                    use(class="works__title-svg" xlink:href="../assets/images/sprite.svg#works_header")
+                h1.title Мои работы
+            .slider
+                .slider__arrow.slider__arrow--left
+                    svg(class="slider__arrow-icon slider__arrow-icon--left" style={width: '20px', height: '30px'})
+                        use(class="slider__arrow-svg" xlink:href="../assets/images/sprite.svg#portf_arrow_down")
+                ul.works__list
+                    li.works__item
+                        .works__img(style={width: '512px', 'background-image':'url("assets/images/img/work-1.png")'})
+                        .works__description
+                            .works__name
+                                h2 Сайт школы онлайн Образования
+                            .works__technologies
+                                span.works__technologies-text HTML, CSS, JavaScript
+                            .works__button
+                                svg(class="slider__link-icon" style={width: '20px', height: '30px'})
+                                    use(class="slider__link-svg" xlink:href="../assets/images/sprite.svg#link")
+                                a.works__link Посмотреть сайт
+                .slider__arrow.slider__arrow--right
+                    svg(class="slider__arrow-icon slider__arrow-icon--right" style={width: '20px', height: '30px'})
+                        use(class="slider__arrow-svg" xlink:href="../assets/images/sprite.svg#portf_arrow_up")
+                ul.nav-dots
+                    li.nav-dots__item
+        section.comments.section--comments
+            .comments__title
+                svg(class="comments__title-icon" style={width: '490px', height: '157px'})
+                    use(class="comments__title-svg" xlink:href="../assets/images/sprite.svg#about_header")
+                h1.title Что обо мне говорят
+            .comments__content
+                ul.quote
+                    li.quote__item
+                        span.quote__quotes "
+                        .quote__text
+                            p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .quote__person
+                            .quote__person-photo(style={'background-image':'url("assets/images/photo/dima.jpg")'})
+                            .quote__person-info
+                                .quote__person-name Ковальчук Дмитрий
+                                .quote__person-job основатель Loftschool
+                    li.quote__item
+                        span.quote__quotes "
+                        .quote__text
+                            p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                        .quote__person
+                            .quote__person-photo(style={'background-image':'url("assets/images/photo/vova.jpg")'})
+                            .quote__person-info
+                                .quote__person-name Сабанцев Владимир
+                                .quote__person-job преподаватель
+            .comment__form
+                .comment__form-title
+                    h1.title Связаться со мной
+                form.contact-form
+                    input(type="text" placeholder="Имя").contact-form__input
+                    input(type="email" placeholder="Email").contact-form__input
+                    input(type="textarea" placeholder="Ваше сообщение").contact-form__input.contact-form__textarea
+                    button(type="submit").contact-form__submit.intro-btns__item Отправить
+                    button(type="reset").contact-form__reset.intro-btns__item Очистить
+            .comment__arrow-up
+                svg(class="comment__arrow-icon" style={width: '20px', height: '30px'})
+                    use(class="comment__arrow-svg" xlink:href="../assets/images/sprite.svg#portf_arrow_up")
+    include ../common/footer
