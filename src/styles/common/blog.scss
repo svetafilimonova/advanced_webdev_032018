@@ -1,0 +1,90 @@
+.header__info_blog {
+    color: #fff;
+}
+
+.welcome__info-name_blog {
+    font-size: 63px;
+    font-family:$BernierReg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before, &:after {
+        content: '';
+        display: inline-block;
+        width: 23px;
+        height: 4px;
+        background-color: rgba(#fff, .3);
+    }
+    &:before {
+        margin-right: 20px;
+    }
+    &:after {
+        margin-left: 20px;
+    }
+}
+
+.header__bg-icon_blog_header {
+    top: 35%;
+}
+
+.header__traingles_blog {
+    fill: #ffffff;
+}
+
+.section--blog {
+    display: flex;
+    margin-top: 60px;
+}
+
+.blog__nav-menu {
+    flex: 0 0 25%;
+    padding: 0 45px;
+    text-align: right;
+}
+
+.blog-nav__item {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+.blog-nav__item--active {
+    border-right: 4px solid $seagreen;
+    color: $seagreen;
+    font-family: $RobotoB;
+}
+
+.blog__main {
+    padding: 0 60px 125px 60px;
+    flex: 0 0 55%;
+}
+
+.articles__title {
+    font-size: 35px;
+    font-family:$BernierReg;
+    color: $darkgrey;
+    margin-bottom: 15px;
+}
+
+.articles__date {
+    color: $seagreen;
+    margin-bottom: 23px;
+    display: block;
+}
+
+.articles__item {
+    padding-bottom: 70px;
+    padding-top: 60px;
+    border-bottom: 5px solid #f1f1f2;
+
+    &:last-child {
+        border-bottom: none;
+    }
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+.articles__text p {
+    margin-bottom: 15px;
+}

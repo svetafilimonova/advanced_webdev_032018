@@ -14,6 +14,7 @@ $fontgrey: #6e7d84;
 
 
 
+
 @mixin pseudo-elem($width, $height, $bgcolor, $display) {
     content: "";
     display: $display;
@@ -30,18 +31,19 @@ $fontgrey: #6e7d84;
 
 body{
 // height: 100%;
-height: 100vh;
+// height: 100vh;
 width: 100%;
 padding: 0;
 margin: 0;
 line-height: 1.42;
 font-family: $RobotoReg;
 font-size: 16px;
+position: relative;
 // overflow: hidden;
 }
 
 html,body {
-    height: 100%;
+    // height: 100%;
     min-height: 100%;
     // overflow: hidden;
 }
@@ -97,9 +99,9 @@ p {
 .wrapper--pages {
     min-height: 100%;
     &:after {
-        content: '';
-        display: block;
-        height: 145px;
+        // content: '';
+        // display: block;
+        // height: 145px;
     }
 }
 
@@ -110,7 +112,9 @@ p {
 
 .footer--pages {
     height: 145px;
-    margin-top: -145px;
+    // margin-top: -145px;
+    position: absolute;
+    bottom: 0;
 }
 
 .title {
@@ -156,6 +160,7 @@ p {
 @import 'common/footer';
 @import 'common/nav-menu';
 @import 'common/about';
+@import 'common/blog';
 @import 'common/socials';
 @import 'common/greenbtns';
 @import 'common/technologies';

@@ -64,22 +64,35 @@
     margin-bottom: 10px
 }
 
+.about__description {
+    margin-bottom: 40px;
+}
 .skills-list__item {
     font-size: 26px;
     font-family: $RobotoMed;
     color: $darkgrey;
+    margin-bottom: 40px;
 }
+
+.skills-list__item-text {
+    margin-bottom: 20px;
+    display: block;
+}
+
 .skills-row__item {
     display: inline-block;
     position: relative;
+    margin-right: 20px;
 }
 .skills-row__item-text {
     color: $seagreen;
     font-size: 14px;
     font-family: $RobotoMed;
     position: absolute;
-    top: 40%;
-    right: 41%;
+    top: 39%;
+    right: 0%;
+    width: 122px;
+    text-align: center;
 }
 
 .skills-row__circles  {
@@ -97,4 +110,39 @@
 
 .skills-row__circle-outer--Css {
     stroke-dashoffset: 70; 
+}
+
+.section_map {
+    // min-height: 650px;
+    position: relative;
+}
+.map__google-map {
+    @extend %bgpicture;
+    background-image: url(../images/img/map.jpg);
+    // height: 100%
+    min-height: 977px;
+}
+
+.contacts {
+    width: 382px;
+    background-color: rgba(#fff, .8);
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    padding: 30px;
+    color: $darkgrey;
+}
+
+.contacts__item {
+    margin-bottom: 15px;
+    font-family: $RobotoMed;
+    color: #708288;
+    // color: $darkgrey;
+    display: flex;
+    align-items: center;
+}
+
+.contacts__icon {
+    margin-right: 10px;
+    fill: $seagreen;
 }

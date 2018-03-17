@@ -4,9 +4,10 @@ include ../common/header
 block variables
     - var title = 'Обо мне'
     -var skills = [["Html", "Css",'JavaScrpt'], ["Git", "Gulp"]]
+    -var contactIcons = ['skype', 'envelope', 'phone', 'map_marker']
 
 block content
-    .wrapper.wrapper--pages.wrapper--about
+    .wrapper--pages.wrapper--about
         +header("about", "Светлана Филимонова", "Личный сайт веб разработчика", 'portfolio_header', true)
         section.about.section--about
             .about__col.about__col--left
@@ -27,11 +28,12 @@ block content
                 .about__title
                     h2.title.title-smaller Чем я могу быть вам полезен
                 .about__description
-                    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
                 .about__skills
                     ul.skills-list
                         each item, ind in ["Frontend", "Workflow"]
-                            li.skills-list__item= item
+                            li.skills-list__item
+                                span.skills-list__item-text= item
                                 ul.skills-row
                                     each skill in skills[ind]
                                         li.skills-row__item
@@ -40,7 +42,17 @@ block content
                                                 circle.skills-row__item-circle--outer(class=`skills-row__circle-outer skills-row__circle-outer--${skill}`
                                                 r="50" cx="61" cy="61" stroke="#00bfa5" fill="none" transform="rotate(-90 61 61)")
                                             span.skills-row__item-text= skill
-        section.map.section_map
+    section.map.section_map
+            .map__google-map
+            .contacts
+                .contacts__heading
+                    h2.title.title-smaller.title_dark Контакты
+                ul.contacts__list
+                    each item, indx in ["Svetlana.Filimonova.62", 'lana.shvedova@gmail.com', '+7 952 128 89 51', 'г.Рязань, ул.Кальная']
+                        li.contacts__item
+                            svg(class=`contacts__icon contacts__icon-${contactIcons[indx]}` style={width: '20px', height: '20px'})
+                                use(class=`contacts__icon-svg` xlink:href=`../assets/images/sprite.svg#${contactIcons[indx]}`)
+                            span.contacts__info=item
     include ../common/footer
    
     
