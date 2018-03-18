@@ -1,0 +1,253 @@
+.header__traingle-left_works, .header__traingle-right_works {
+    fill: $white;
+}
+
+.header__info_works {
+    color: #fff;
+}
+
+.works__title-icon {
+    fill: #f0eee7;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    top: -2%;
+    right: 33%;
+}
+
+.works__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+    background-color: $white;
+}
+
+.works__title-text {
+    z-index: 10;
+}
+
+.slider {
+    background-color: #f0efe9;
+    display: flex;
+    position: relative;
+}
+
+.slider__arrow {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__arrow-icon  {
+    fill: $seagreen;
+    cursor: pointer;
+}
+.slider__arrow-icon--left {
+   transform: rotate(90deg);
+}
+
+.slider__arrow-icon--right {
+    transform: rotate(90deg);
+ }
+
+ .works__list {
+     flex: 1 0 80%;
+ }
+.works__img {
+    width: 520px;
+    height: 650px;
+    @extend %bgpicture;
+    margin-right: 105px;
+}
+
+.works__item {
+    display: flex;
+}
+
+.works__description {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.works__name {
+    font-family: $BernierReg;
+    color: $darkgrey;
+    font-size: 35px;
+}
+
+.works__technologies {
+    color: $seagreen;
+    border-bottom: 1px solid $seagreen;
+    border-top: 1px solid $seagreen;
+    font-family: $RobotoMed;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.works__button {
+    position: relative;
+}
+
+.slider__link-icon {
+    fill: #fff;
+    position: absolute;
+    right: 92%;
+    top: 14%;
+    cursor: pointer;
+
+}
+.works__link {
+    color: #fff;
+    background-color: $seagreen;
+    font-family: $RobotoMed;
+    padding: 10px 20px 10px 50px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav-dots {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+}
+
+.nav-dots__item {
+    width: 10px;
+    height: 10px;
+    border: 2px solid $seagreen;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.nav-dots__item--active {
+    background-color: $seagreen;
+}
+
+.section--comments {
+    min-height: 1270px;
+    background-image: url(../images/img/works.jpg);
+    @extend %bgpicture;
+}
+
+.comments__title {
+    position: relative;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.comments__title-icon {
+    fill: #ebecec;
+    position: absolute;
+    top: 4%;
+    right: 32%;
+}
+
+.comments__title-text {
+    z-index: 10;
+    position: relative;
+    width: 26%;
+    text-align: center;
+    line-height: 1;
+}
+
+.quote__quotes {
+    width: 34px;
+    height: 30px;
+    // @extend %bgpicture;
+    background-image: url(../images/img/quotes.png);
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+}
+
+.quote__person-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    @extend %bgpicture;
+    margin-right: 20px;
+}
+.quote__text {
+    color: $darkgrey;
+    margin-bottom: 25px;
+}
+
+.quote__person {
+    display: flex;
+    align-items: center;
+}
+
+.quote__person-info {
+    color: $seagreen;
+}
+
+.quote__person-name {
+    font-family: $RobotoB;
+}
+
+.quote {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+.quote__item {
+    // display: flex;
+    width: 30%;
+    margin-right: 36px;
+}
+
+
+.comment__form {
+    width: 380px;
+    background-color: rgba(#fff, .3);
+    margin: auto;
+    // padding: 40px 20px 20px;
+}
+
+.comment__form-heading {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.contact-form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.contact-form__input {
+    outline: none;
+    border: none;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+::-webkit-input-placeholder {
+    color:#aeb0b1;
+    vertical-align: top;
+}
+
+.contact-form__textarea {
+    height: 140px;
+
+    ::-webkit-input-placeholder {
+        vertical-align: baseline;
+    }
+}
+
+.comment__arrow-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.comment__arrow-icon--up {
+    fill: rgba(#fff, .5);
+}

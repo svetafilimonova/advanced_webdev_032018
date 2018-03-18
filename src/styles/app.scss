@@ -11,7 +11,7 @@ $darkgrey: #455a64;
 $darkest: #373e42;
 $lightgrey: #c5cbcd;
 $fontgrey: #6e7d84;
-
+$white: #faf8f0;
 
 
 
@@ -161,6 +161,7 @@ p {
 @import 'common/nav-menu';
 @import 'common/about';
 @import 'common/blog';
+@import 'common/my-works';
 @import 'common/socials';
 @import 'common/greenbtns';
 @import 'common/technologies';
