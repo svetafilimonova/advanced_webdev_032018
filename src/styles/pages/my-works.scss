@@ -185,6 +185,7 @@
 
 .quote__person-info {
     color: $seagreen;
+    font-style: normal;
 }
 
 .quote__person-name {
@@ -207,6 +208,7 @@
     width: 380px;
     background-color: rgba(#fff, .3);
     margin: auto;
+    margin-bottom: 50px;
     // padding: 40px 20px 20px;
 }
 
@@ -216,15 +218,16 @@
 }
 
 .contact-form {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: auto;
+    align-items: center;
 }
 .contact-form__input {
     outline: none;
     border: none;
-    width: 100%;
+    width: 90%;
     margin-bottom: 20px;
     border-radius: 5px;
     padding: 10px 15px;
@@ -242,7 +245,30 @@
         vertical-align: baseline;
     }
 }
+.comment__form-btns {
+    display: flex;
+    border-radius:0 0 5px 5px;
+    overflow: hidden;
+    width: 100%;
+}
+.contact-form__btn{
+    display: inline-block;
+    background-color: rgba($seagreen, .7);
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-family: $RobotoMed;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+    background-color: rgba($darkSeagreen, .7);
+    }
+}
 
+.contact-form__btn--submit {
+    border-right: 2px solid #73c8c0;
+}
 .comment__arrow-up {
     display: flex;
     align-items: center;

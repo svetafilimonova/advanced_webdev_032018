@@ -15,8 +15,9 @@ block content
                 h1.title.title_dark.title-bigger.works__title-text Мои работы
             .slider
                 .slider__arrow.slider__arrow--left
-                    svg(class="slider__arrow-icon slider__arrow-icon--left" style={width: '20px', height: '30px'})
-                        use(class="slider__arrow-svg" xlink:href="../assets/images/sprite.svg#portf_arrow_down")
+                    button.reset-btn
+                        svg(class="slider__arrow-icon slider__arrow-icon--left" style={width: '20px', height: '30px'})
+                            use(class="slider__arrow-svg" xlink:href="../assets/images/sprite.svg#portf_arrow_down")
                 ul.works__list
                     li.works__item
                         .works__img(style={'background-image':'url("assets/images/img/work1.png")'})
@@ -30,8 +31,9 @@ block content
                                     use(class="slider__link-svg" xlink:href="../assets/images/sprite.svg#link")
                                 a.works__link Посмотреть сайт
                 .slider__arrow.slider__arrow--right
-                    svg(class="slider__arrow-icon slider__arrow-icon--right" style={width: '20px', height: '30px'})
-                        use(class="slider__arrow-svg" xlink:href="../assets/images/sprite.svg#portf_arrow_up")
+                    button.reset-btn
+                        svg(class="slider__arrow-icon slider__arrow-icon--right" style={width: '20px', height: '30px'})
+                            use(class="slider__arrow-svg" xlink:href="../assets/images/sprite.svg#portf_arrow_up")
                 ul.nav-dots
                     li.nav-dots__item.nav-dots__item--active 
                     li.nav-dots__item
@@ -46,34 +48,37 @@ block content
                 ul.quote
                     li.quote__item
                         .quote__quotes
-                        .quote__text
+                        blockquote.quote__text
                             p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                         .quote__person
                             .quote__person-photo(style={'background-image':'url("assets/images/photo/dima.jpg")'})
-                            .quote__person-info
+                            cite.quote__person-info
                                 .quote__person-name Ковальчук Дмитрий
                                 .quote__person-job основатель Loftschool
                     li.quote__item
                         .quote__quotes
-                        .quote__text
+                        blockquote.quote__text
                             p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
                         .quote__person
                             .quote__person-photo(style={'background-image':'url("assets/images/photo/vova.jpg")'})
-                            .quote__person-info
+                            cite.quote__person-info
                                 .quote__person-name Сабанцев Владимир
                                 .quote__person-job преподаватель
             .comment__form
                 .comment__form-title
                     h1.title.title-smaller.comment__form-heading Связаться со мной
                 form.contact-form
-                    input(type="text" placeholder="Имя").contact-form__input
-                    input(type="email" placeholder="Email").contact-form__input
-                    input(type="textarea" placeholder="Ваше сообщение").contact-form__input.contact-form__textarea
-                    //- button(type="submit").contact-form__submit.intro-btns__item Отправить
-                    //- button(type="reset").contact-form__reset.intro-btns__item Очистить
-                .buttons-wrapper
-                    +buttons(["Отправить", 'Очистить'], ['#','#'])
+                    label.visually-hidden(for="name") Имя
+                    input(type="text" placeholder="Имя" id="name").contact-form__input
+                    label.visually-hidden(for="email") Электронная почта
+                    input(type="email" placeholder="Email" id="email").contact-form__input
+                    label.visually-hidden(for="msg") Ваше сообщение
+                    input(type="textarea" placeholder="Ваше сообщение" id="msg").contact-form__input.contact-form__textarea
+                    .comment__form-btns
+                        button(type="submit").contact-form__btn.contact-form__btn--submit.reset-btn Отправить
+                        button(type="reset").contact-form__btn.contact-form__btn--reset.reset-btn Очистить
             .comment__arrow-up
-                svg(class="comment__arrow-icon comment__arrow-icon--up" style={width: '20px', height: '30px'})
-                    use(class="comment__arrow-svg" xlink:href="../assets/images/sprite.svg#portf_arrow_up")
+                button.reset-btn
+                    svg(class="comment__arrow-icon comment__arrow-icon--up" style={width: '20px', height: '30px'})
+                        use(class="comment__arrow-svg" xlink:href="../assets/images/sprite.svg#portf_arrow_up")
     include ../common/footer
