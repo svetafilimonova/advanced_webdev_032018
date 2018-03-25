@@ -12,7 +12,11 @@
     top: 50%;
     right: 50%;
     top: -2%;
-    right: 33%;
+    transform: translateX(50%);
+
+    @include phone {
+        height: 100px;
+    }
 }
 
 .works__title {
@@ -39,6 +43,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include phone {
+        width: 5%;
+    }
 }
 
 .slider__arrow-icon  {
@@ -61,6 +69,14 @@
     height: 650px;
     @extend %bgpicture;
     margin-right: 105px;
+
+    @include tablet {
+        margin-right: 0;
+        }
+
+    @include phone {
+        width: 100%;
+        }
 }
 
 .works__item {
@@ -69,6 +85,10 @@
     @include tablet {
         flex-direction: column;
         align-items: center;
+     }
+
+     @include phone {
+        width: 100%;
      }
 }
 
@@ -80,6 +100,15 @@
 
     @include tablet {
        order: -1; 
+       width: 65%;
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    @include phone {
+        font-size: 14px;
+        width: 100%;
     }
 }
 .works__name {
@@ -92,6 +121,17 @@
     }
 }
 
+.works__name-title {
+
+    @include tablet {
+        font-size: 30px;
+        }
+
+        @include phone {
+            font-size: 21px;
+        }
+}
+
 .works__technologies {
     color: $seagreen;
     border-bottom: 1px solid $seagreen;
@@ -99,6 +139,16 @@
     font-family: $RobotoMed;
     padding: 20px 0;
     margin-bottom: 40px;
+
+    @include tablet {
+        width: 80%;
+        align-self: center;
+    }
+
+    @include phone {
+        width: 100%;
+    }
+
 }
 
 .works__button {
@@ -111,6 +161,13 @@
     right: 92%;
     top: 14%;
     cursor: pointer;
+
+
+    @include tablet {
+        right: 65%;
+    }
+
+
 
 }
 .works__link {
@@ -127,6 +184,11 @@
     position: absolute;
     bottom: 0;
     right: 50%;
+    transform: translateX(50%);
+
+    @include tablet {
+        bottom: 2%;
+    }
 }
 
 .nav-dots__item {
@@ -146,6 +208,14 @@
     min-height: 1420px;
     background-image: url(../images/img/works.jpg);
     @extend %bgpicture;
+
+    @include tablet {
+        min-height: 1350px;
+    }
+
+    @include phone {
+        min-height: 1560px;
+    }
 }
 
 .comments__title {
@@ -155,19 +225,45 @@
     justify-content: center;
 }
 
+.comments__title--works {
+    @include tablet {
+        margin-bottom: 20px;
+    }
+
+    @include phone {
+        margin-bottom: 0px;
+    }
+}
+
 .comments__title-icon {
     fill: #ebecec;
     position: absolute;
     top: 4%;
-    right: 32%;
+    right: 50%;
+    transform: translateX(50%);
+
+    @include tablet {
+        top: 0%;
+    }
+
+    @include phone {
+        height: 100px;
+        top: 10%;
+    }
 }
 
 .comments__title-text {
     z-index: 10;
     position: relative;
-    width: 26%;
+    width: 50%;
     text-align: center;
     line-height: 1;
+
+    @include tablet {
+        width: 100%;  
+        line-height: inherit;
+        margin-bottom: 0;
+    }
 }
 
 .quote__quotes {
@@ -177,6 +273,11 @@
     background-image: url(../images/img/quotes.png);
     background-repeat: no-repeat;
     margin-bottom: 30px;
+
+    @include phone {
+        align-self: center;
+        margin-bottom: 10px;
+    }
 }
 
 .quote__person-photo {
@@ -189,6 +290,11 @@
 .quote__text {
     color: $darkgrey;
     margin-bottom: 25px;
+
+    @include tablet {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
 }
 
 .quote__person {
@@ -205,15 +311,47 @@
     font-family: $RobotoB;
 }
 
+.comments__content--works {
+    margin-bottom: 70px;
+
+    @include phone {
+        margin-bottom: 0px;
+    } 
+}
+
 .quote {
     display: flex;
     justify-content: center;
-    margin-bottom: 70px;
+    
+
+    @include tablet {
+        padding: 0 20px;
+    }
+
+    @include phone {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 .quote__item {
     // display: flex;
     width: 30%;
     margin-right: 36px;
+
+    @include tablet {
+        width: 50%;
+        margin-right: 0px;
+    }
+
+    @include phone {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 35px;
+        line-height: 24px;
+        font-size: 14px;
+    }
 }
 
 
@@ -221,8 +359,17 @@
     width: 380px;
     background-color: rgba(#fff, .3);
     margin: auto;
-    margin-bottom: 50px;
+    
     // padding: 40px 20px 20px;
+}
+
+.comment__form--works {
+    margin-bottom: 50px;
+
+    @include tablet {
+        margin-bottom: 80px;
+    }
+   
 }
 
 .comment__form-heading {
@@ -286,6 +433,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.comment__arrow-btn {
+    width: 35px;
+
+    @include tablet {
+        width: 40px;
+    }
+    
 }
 .comment__arrow-icon--up {
     fill: rgba(#fff, .5);

@@ -9,6 +9,30 @@ $lightgrey: #c5cbcd;
 $fontgrey: #6e7d84;
 $white: #faf8f0;
 
+$desktop: 1800px;
+$tablet: 768px;
+$phone:480px;
+
+                        // ADAPTIVE
+
+    @mixin desktop {
+         @media screen and (min-width:$desktop) {
+            @content;
+        }
+    }
+                        
+    @mixin tablet {
+         @media screen and (max-width:$tablet) {
+             @content;
+    }
+}
+                                                
+@mixin phone {
+    @media screen and (max-width:$phone) {
+        @content;
+    }
+}
+
 
 @mixin pseudo-elem($width, $height, $bgcolor, $display) {
     content: "";
@@ -81,7 +105,10 @@ p {
 .container {
     width: 90%;
     margin: 0 auto;
+
 }
+
+
 
 .wrapper {
     &:after {
@@ -148,10 +175,21 @@ p {
 .title-smaller {
     font-size: 35px;
     
+@include tablet {
+    font-size: 30px;
+    }
+    
 }
 
 .title-bigger {
     font-size: 63px;
+
+    @include tablet {
+    font-size: 49px;
+    }
+    @include phone {
+        font-size: 35px;
+        }
 }
 
 .reset-btn {
@@ -184,26 +222,3 @@ p {
 }
 
 
-                        // ADAPTIVE
-
-$desktop: 1800px;
-$tablet: 768px;
-$phone:480px;
-
-@mixin desktop {
-    @media screen and (min-width:$desktop) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media screen and (max-width:$tablet) {
-            @content;
-     }
-}
-                        
-@mixin phone {
-    @media screen and (max-width:$phone) {
-        @content;
-    }
-}
