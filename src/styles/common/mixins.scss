@@ -91,8 +91,17 @@ p {
     }
 }
 
-.wrapper--pages {
-    min-height: 100%;
+.wrapper-pages {
+    // min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 100%;
+}
+
+.p-container {
+ flex: 1 0 auto;
 }
 
 .footer {
@@ -101,10 +110,13 @@ p {
 }
 
 .footer--pages {
-    height: 145px;
+    // height: 145px;
+    flex: 0 0 auto;
     // margin-top: -145px;
     position: absolute;
     bottom: 0;
+    z-index: 1;
+    width: 100%;
 }
 
 .title {
@@ -169,4 +181,29 @@ p {
 .welcome__info-title--smaller {
     font-size: 16px; 
     font-family: $RobotoReg;
+}
+
+
+                        // ADAPTIVE
+
+$desktop: 1800px;
+$tablet: 768px;
+$phone:480px;
+
+@mixin desktop {
+    @media screen and (min-width:$desktop) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width:$tablet) {
+            @content;
+     }
+}
+                        
+@mixin phone {
+    @media screen and (max-width:$phone) {
+        @content;
+    }
 }

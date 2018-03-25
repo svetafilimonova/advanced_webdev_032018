@@ -23,7 +23,7 @@
 
 
 }
-.socials__icon_green {
+.socials__icon--green {
     fill: $paleSeagreen;
     transition: .3s;
     margin-right: 15px;
@@ -33,7 +33,7 @@
     }
 }
 
-.socials__icon_white {
+.socials__icon--white {
     fill: #fff;
     opacity: .7;
     margin-right: 10px;
@@ -41,9 +41,13 @@
     &:hover {
     opacity: 1;
     }
+
+    @include phone {
+        margin-right: 25px; 
+    }
 }
 
-.socials__link_rounded {
+.socials__link--rounded {
     width: 38px;
     height: 38px;
     border: 1px solid rgba(#fff, .6);
@@ -56,7 +60,7 @@
         background-color: #fff;
     }
 }
-.socials__icon_rounded {
+.socials__icon--rounded {
     fill: rgba(#fff, .6);
     // opacity: .6;
     width: 24px;
@@ -64,6 +68,6 @@
     transition: .3s;
 }
 
-.socials__link_rounded:hover > .socials__icon_rounded {
+.socials__link--rounded:hover > .socials__icon--rounded {
     fill: rgba(black, .6);
 }

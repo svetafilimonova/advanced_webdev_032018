@@ -65,6 +65,11 @@
 
 .works__item {
     display: flex;
+
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+     }
 }
 
 .works__description {
@@ -72,11 +77,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include tablet {
+       order: -1; 
+    }
 }
 .works__name {
     font-family: $BernierReg;
     color: $darkgrey;
     font-size: 35px;
+
+    @include tablet {
+    font-size: 30px;
+    }
 }
 
 .works__technologies {
@@ -130,7 +143,7 @@
 }
 
 .section--comments {
-    min-height: 1270px;
+    min-height: 1420px;
     background-image: url(../images/img/works.jpg);
     @extend %bgpicture;
 }

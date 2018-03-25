@@ -3,7 +3,6 @@
     display: flex;
 
     .intro-btns__item {
-        display: inline-block;
         background-color: rgba($seagreen, .7);
         // background-color: rgba(0,191,165,.95);
         border-right: 2px solid #73c8c0;
@@ -12,6 +11,9 @@
         text-align: center;
         font-size: 16px;
         font-family: $RobotoMed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
         &:hover {
         background-color: rgba($darkSeagreen, .7);

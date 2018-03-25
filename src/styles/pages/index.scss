@@ -1,4 +1,4 @@
-.wrapper_intro {
+.wrapper--intro {
     background-image: url(../images/img/mount.jpg);
     @extend %bgpicture;
     // height: 100vh;
@@ -10,7 +10,7 @@
 
 }
 
-.container_intro {
+.container--intro {
     max-width: 457px;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,6 @@
     display: flex;
     justify-content: flex-end;
     flex-shrink: 0;
-    margin-bottom: 50px;
     padding: 50px 50px;
 }
 
@@ -31,6 +30,7 @@
     border-radius: 5px;
     border: 1px solid #fff;
     padding: 10px 25px;
+    margin-bottom: 50px;
     // margin-top: 37px;
     // margin-right: 50px;
 }
@@ -44,6 +44,7 @@
     flex-direction: column;
     overflow: hidden;
     position: relative;
+    padding: 20px;
     // margin-bottom: 100px;
     // align-self: center;
     // justify-self: center;

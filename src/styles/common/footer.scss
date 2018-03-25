@@ -1,6 +1,6 @@
 .footer--pages {
     background-color: rgba(black, .6);
-    height: 145px;
+    // height: 145px;
 }
 
 .footer__row {
@@ -8,16 +8,41 @@
     border-bottom: 1px solid rgba(255,255,255,0.1);
     display: flex;
     align-items: center;
+
+    &:last-child {
+        border-bottom: none;  
+    }
+
+    @include tablet {
+        flex-direction: column;
+        justify-content: center;
+    }
     
 }
 
 .footer__col {
     width: 50%;
+
+    @include tablet {
+        width: 100%;
+    }
+
+}
+
+.footer__col--left {
+    @include tablet {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
 }
 
 .footer__col--right {
     display: flex;
    justify-content: flex-end;
+
+   @include tablet {
+    justify-content: center;
+}
   
 }
 
@@ -27,10 +52,26 @@
 
 .footer__row--bottom {
     padding: 13px 30px 12px 30px;
+
+    @include tablet {
+        text-align: center;
+    }
 }
 
 .footer__col-text {
     font-family: $RobotoL;
     color: rgba(#fff, .6);
     font-size: 16px;
+
+    @include phone {
+        font-size: 13px; 
+    }
+}
+
+.nav-menu--footer {
+
+    @include tablet {
+        display: flex;
+        justify-content: center;
+    }
 }
