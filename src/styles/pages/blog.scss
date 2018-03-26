@@ -41,28 +41,72 @@
     flex: 0 0 25%;
     padding: 0 45px;
     text-align: right;
+    position: relative;
 
     @include tablet {
+        background-color: $seagreen;
+        z-index: 50;
         position: absolute;
-        overflow: hidden;
-        clip: rect(0,0,0,0);
-        height: 1px;
-        width: 1px;
-        margin: -1px;
-        padding: 0;
-        border: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+
+    }
+
+    &:after {
+        content: '';
+        width: 50px;
+        height: 50px;
+        display: none;
+        border-radius: 50%;
+        background-color: $seagreen;
+        position: absolute;
+        left: 93%;
+        top: 45%;
+
+        @include tablet {
+            display: block;
+        }
+
+        @include phone {
+            top: 25%;
+            left: 97%;
+        }
     }
 }
 
+.blog__navigation {
+    @include tablet {
+        transform: translateY(270%);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;         
+    }
+}
+
+.blog-nav {
+    @include tablet {
+        width: 70%;
+    }
+}
 .blog-nav__item {
     margin-bottom: 20px;
     padding: 10px 20px;
+    @include tablet {
+       color: #ffffff;
+    }
 }
 
 .blog-nav__item--active {
     border-right: 4px solid $seagreen;
     color: $seagreen;
     font-family: $RobotoB;
+
+    @include tablet {
+        font-weight: 800;
+        color: #ffffff;
+     }
 }
 
 .blog__main {

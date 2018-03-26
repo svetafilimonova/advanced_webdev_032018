@@ -214,11 +214,19 @@ p {
     font-size: 28px;
     font-family: $RobotoMed;
     margin-bottom: 0;
+
+    @include phone {
+        font-size: 21px;
+    }
 }
 
 .welcome__info-title--smaller {
     font-size: 16px; 
     font-family: $RobotoReg;
+
+    @include phone {
+        font-size: 14px;
+    }
 }
 
 

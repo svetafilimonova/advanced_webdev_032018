@@ -17,7 +17,7 @@
     align-items: center;
 
     @include phone {
-        max-width: 100%;
+        width: 95%;
     }
 }
 
@@ -57,9 +57,17 @@
 
 }
 
+.intro__flip {
+    width: 380px;  
+
+    @include phone {
+       width: 100%;  
+    }
+}
+
 .welcome {
     background-color: rgba(252, 252, 252, 0.8);
-    width: 380px;
+    width: 100%;
     border-radius: 5px 5px 0 0;
     display: flex;
     flex-direction: column;
@@ -160,6 +168,10 @@
     margin: 0 auto;
     color: $fontgrey;
     // color: $darkgrey;
+
+    @include phone {
+        width: 100%;
+    }
 }
 
 .auth-form__controls {
@@ -168,6 +180,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include phone {
+        width: 80%;  
+    }
 }
 
 .auth-form__check-fake {

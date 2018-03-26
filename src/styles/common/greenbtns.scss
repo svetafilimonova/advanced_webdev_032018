@@ -22,6 +22,10 @@
         &:last-child {
         border-right: none;
         }
+
+        @include phone {
+            font-size: 14px;
+        }
     }
 }
 
@@ -30,7 +34,7 @@
 }
 
 .buttons-wrapper {
-    width: 380px;
+    // width: 380px;
     border-radius:0 0 5px 5px;
     overflow: hidden;
     margin-bottom: 50px;
