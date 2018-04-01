@@ -15,6 +15,7 @@ block content
                             each item in ['Самое важное в SASS', 'Приёмы в вёрстке, без которых  не обходится ни один сайт', 'Самый необходимый набор Gulp плагинов', 'Почему я выбрал Pug']
                                 li.blog-nav__item
                                     a.blog-nav__link=item
+                    button.blog__nav-btn.reset-btn            
                 main.blog__main
                     article.articles__text
                         h2.articles__title Самое важное в SASS
@@ -33,3 +34,6 @@ block content
             each item, index in ["Мои работы", "Обо мне", "Блог", "Авторизация"]
                 li.nav-menu__item.fullscr-menu__item
                     a.nav-menu__link.fullscr-menu__link.title(href=links[index])= item
+    button.reset-btn.hamburger
+        .hamburger__menu
+            .hamburger__btn

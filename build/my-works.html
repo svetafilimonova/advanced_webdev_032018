@@ -31,13 +31,7 @@
                     </svg></a></li>
               </ul>
             </div>
-            <div class="header__row-left">
-              <button class="reset-btn hamburger">
-                <div class="hamburger__menu">
-                  <div class="hamburger__btn"></div>
-                </div>
-              </button>
-            </div>
+            <div class="header__row-left"></div>
           </header>
           <div class="header__row header__row-welcome">
             <div class="welcome header__welcome header__welcome_works">
@@ -152,22 +146,24 @@
               </li>
             </ul>
           </div>
-          <div class="comment__form comment__form--works"> 
-            <div class="comment__form-title">
-              <h3 class="title title-smaller comment__form-heading">Связаться со мной</h3>
-            </div>
-            <form class="contact-form">
-              <label class="visually-hidden" for="name">Имя</label>
-              <input class="contact-form__input" type="text" placeholder="Имя" id="name">
-              <label class="visually-hidden" for="email">Электронная почта</label>
-              <input class="contact-form__input" type="email" placeholder="Email" id="email">
-              <label class="visually-hidden" for="msg">Ваше сообщение</label>
-              <input class="contact-form__input contact-form__textarea" type="textarea" placeholder="Ваше сообщение" id="msg">
-              <div class="comment__form-btns">
-                <button class="contact-form__btn contact-form__btn--submit reset-btn" type="submit">Отправить</button>
-                <button class="contact-form__btn contact-form__btn--reset reset-btn" type="reset">Очистить</button>
+          <div class="comment__form-wrapper">
+            <div class="comment__form comment__form--works"> 
+              <div class="comment__form-title">
+                <h3 class="title title-smaller comment__form-heading">Связаться со мной</h3>
               </div>
-            </form>
+              <form class="contact-form">
+                <label class="visually-hidden" for="name">Имя</label>
+                <input class="contact-form__input" type="text" placeholder="Имя" id="name">
+                <label class="visually-hidden" for="email">Электронная почта</label>
+                <input class="contact-form__input" type="email" placeholder="Email" id="email">
+                <label class="visually-hidden" for="msg">Ваше сообщение</label>
+                <input class="contact-form__input contact-form__textarea" type="textarea" placeholder="Ваше сообщение" id="msg">
+                <div class="comment__form-btns">
+                  <button class="contact-form__btn contact-form__btn--submit reset-btn" type="submit">Отправить</button>
+                  <button class="contact-form__btn contact-form__btn--reset reset-btn" type="reset">Очистить</button>
+                </div>
+              </form>
+            </div>
           </div>
           <div class="comment__arrow-up">
             <button class="reset-btn comment__arrow-btn">
@@ -227,5 +223,10 @@
         <li class="nav-menu__item fullscr-menu__item"><a class="nav-menu__link fullscr-menu__link title" href="index.html">Авторизация</a></li>
       </ul>
     </div>
+    <button class="reset-btn hamburger">
+      <div class="hamburger__menu">
+        <div class="hamburger__btn"></div>
+      </div>
+    </button>
   </body>
 </html>

@@ -42,6 +42,8 @@
     padding: 0 45px;
     text-align: right;
     position: relative;
+    position: sticky;
+    top:0;
 
     @include tablet {
         background-color: $seagreen;
@@ -51,31 +53,39 @@
         bottom: 0;
         left: 0;
         transform: translateX(-100%);
+        transition: .5s transform;
 
     }
 
-    &:after {
-        content: '';
-        width: 50px;
-        height: 50px;
-        display: none;
-        border-radius: 50%;
-        background-color: $seagreen;
-        position: absolute;
-        left: 93%;
-        top: 45%;
-
-        @include tablet {
-            display: block;
-        }
-
-        @include phone {
-            top: 25%;
-            left: 97%;
-        }
+    &.active {
+        transform: translateX(-35%);  
     }
+
 }
 
+.blog__nav-btn  {
+    width: 55px;
+    height: 55px;
+    display: none;
+    border-radius: 50%;
+    background-color: $seagreen;
+    position: absolute;
+    left: 93%;
+    top: 45%;
+    border: none;
+    outline: none;
+
+    @include tablet {
+        display: block;
+        // left: 97%;
+    }
+
+    @include phone {
+        top: 25%;
+        left: 89%;
+    }
+
+}
 .blog__navigation {
     @include tablet {
         transform: translateY(270%);
@@ -86,6 +96,9 @@
 }
 
 .blog-nav {
+    position: sticky;
+    top:0;
+
     @include tablet {
         width: 70%;
     }
