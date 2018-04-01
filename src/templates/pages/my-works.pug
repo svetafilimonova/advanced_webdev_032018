@@ -65,7 +65,7 @@ block content
                                 cite.quote__person-info
                                     .quote__person-name Сабанцев Владимир
                                     .quote__person-job преподаватель
-                .comment__form-wrapper
+                .comment__form-wrapper 
                     .comment__form.comment__form--works 
                         .comment__form-title
                             h3.title.title-smaller.comment__form-heading Связаться со мной
@@ -75,11 +75,11 @@ block content
                             label.visually-hidden(for="email") Электронная почта
                             input(type="email" placeholder="Email" id="email").contact-form__input
                             label.visually-hidden(for="msg") Ваше сообщение
-                            input(type="textarea" placeholder="Ваше сообщение" id="msg").contact-form__input.contact-form__textarea
+                            textarea(type="textarea" placeholder="Ваше сообщение" id="msg").contact-form__input.contact-form__textarea
                             .comment__form-btns
                                 button(type="submit").contact-form__btn.contact-form__btn--submit.reset-btn Отправить
                                 button(type="reset").contact-form__btn.contact-form__btn--reset.reset-btn Очистить
-                    .comment__form-blur  
+                    .comment__form-blur 
                 .comment__arrow-up
                     button.reset-btn.comment__arrow-btn
                         svg(class="comment__arrow-icon comment__arrow-icon--up" style={width: '100%', height: '30px'})

@@ -396,15 +396,15 @@
 .comment__form-blur {
     background-image: url(../images/img/works.jpg);
     background-repeat: no-repeat;
-    // background-position: 50% 71%;
-    // background-size: cover;
+    background-position: center center;
+    background-size: cover;
     filter: blur(20px);
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -100;
+    // top: 0;
+    // left: 0;
+    // bottom: 0;
+    // right: 0;
+    z-index: -1;
 }
 
 .comment__form {

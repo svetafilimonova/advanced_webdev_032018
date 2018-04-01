@@ -4,6 +4,8 @@ include ../common/socials.pug
 mixin header(pageName, header, text, iconName, arrow)
     -var links = ['my-works.html', 'about.html', 'blog.html', 'index.html']
         section.header
+            .header__parallax
+                img(src="assets/images/img/header.jpg", alt="").header__parallax-img
             header(class=`header__row header__row--top header__row--top--${pageName}`)
                 .header__row-right
                     +socials('socials__icon--white', ['vk','github', 'telegram_logo'], ['https://vk.com/sshvedova2013','https://github.com/svetafilimonova','https://t.me/lana_feels'], '35', '25')

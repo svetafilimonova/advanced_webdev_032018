@@ -65,7 +65,13 @@
     padding: 10px 25px;
     // margin-top: 37px;
     // margin-right: 50px;
+
+    &:hover , &:focus {
+        background-color: $seagreen;
+        border: 1px solid transparent;
+    }
 }
+
 
 .btn-block--intro {
     margin-bottom: 50px;
@@ -90,7 +96,6 @@
 }
 
 .intro__flip-back {
-    // opacity: 0;
     transform: rotateY( 180deg );
 }
 
@@ -105,6 +110,7 @@
     overflow: hidden;
     position: relative;
     padding: 20px;
+    backface-visibility: hidden; 
     // margin-bottom: 100px;
     // align-self: center;
     // justify-self: center;
@@ -289,4 +295,29 @@
 
 .auth-form__radio:checked ~ .auth-form__radio-text {
     color: $seagreen;
+}
+
+.back__buttons-wrapper {
+    display: flex;
+    border-radius:0 0 5px 5px;
+    overflow: hidden;
+}
+.auth-form__button {
+    display: inline-block;
+    background-color: rgba($seagreen, .7);
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-family: $RobotoMed;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+    background-color: rgba($darkSeagreen, .7);
+    }
+}
+
+
+.auth-form__button-main {
+    border-right: 2px solid #73c8c0;
 }

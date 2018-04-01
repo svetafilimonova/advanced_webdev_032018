@@ -59,8 +59,9 @@ block content
                                             input(type="radio", name="robot" id="notsure").auth-form__radio
                                             .auth-form__radio-fake
                                             .auth-form__text.auth-form__radio-text Не уверен
-                    .buttons-wrapper
-                        +buttons(["На главную", 'Войти'], ['welcome','blog'])
+                    .back__buttons-wrapper
+                        button(type="button").auth-form__button.auth-form__button-main.reset-btn На главную
+                        button(type="submit").auth-form__button.auth-form__button-login.reset-btn Войти
     footer.footer.intro-footer
         .container.container--footer-intro
             .footer__copyright
