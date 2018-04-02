@@ -47,7 +47,7 @@
     @include tablet {
         background-color: $seagreen;
         z-index: 50;
-        position: absolute;
+        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
@@ -106,7 +106,16 @@
     @include tablet {
         width: 70%;
     }
+
 }
+.blog-nav__link {
+    color: black;
+
+    @include tablet {
+        color: #ffffff;
+     }
+}
+
 .blog-nav__item {
     margin-bottom: 20px;
     padding: 10px 20px;
@@ -124,6 +133,17 @@
         font-weight: 800;
         color: #ffffff;
      }
+}
+
+.blog-nav__item--active .blog-nav__link {
+
+    color: $seagreen;
+
+    @include tablet {
+        font-weight: 800;
+        color: #ffffff;
+     }
+
 }
 
 .blog__main {

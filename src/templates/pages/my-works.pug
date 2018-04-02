@@ -12,7 +12,7 @@ block content
             section.section.works.section--works
                 .works__title
                     svg(class="works__title-icon" preserveAspectRatio="none" style={width: '100%'})
-                        use(class="works__title-svg" xlink:href="../assets/images/sprite.svg#works_header")
+                        use(class="works__title-svg" xlink:href="/assets/images/sprite.svg#works_header")
                     h1.title.title_dark.title-bigger.works__title-text Мои работы
                 .slider
                     .slider__arrow.slider__arrow--left
@@ -29,12 +29,12 @@ block content
                                     span.works__technologies-text HTML, CSS, JavaScript
                                 .works__button
                                     svg(class="slider__link-icon" style={width: '20px', height: '30px'})
-                                        use(class="slider__link-svg" xlink:href="../assets/images/sprite.svg#link")
+                                        use(class="slider__link-svg" xlink:href="/assets/images/sprite.svg#link")
                                     a.works__link Посмотреть сайт
                     .slider__arrow.slider__arrow--right
                         button.reset-btn
                             svg(class="slider__arrow-icon slider__arrow-icon--right" style={width: '30px', height: '30px'})
-                                use(class="slider__arrow-svg" xlink:href="../assets/images/sprite.svg#portf_arrow_up")
+                                use(class="slider__arrow-svg" xlink:href="/assets/images/sprite.svg#portf_arrow_up")
                     ul.nav-dots
                         li.nav-dots__item.nav-dots__item--active 
                         li.nav-dots__item
@@ -43,7 +43,7 @@ block content
             section.section.comments.section--comments
                 .comments__title.comments__title--works
                     svg(class="comments__title-icon" preserveAspectRatio="none" style={width: '100%'})
-                        use(class="comments__title-svg" xlink:href="../assets/images/sprite.svg#about_header")
+                        use(class="comments__title-svg" xlink:href="/assets/images/sprite.svg#about_header")
                     h2.title.title_dark.title-bigger.comments__title-text Что обо мне говорят
                 .comments__content.comments__content--works
                     ul.quote
@@ -65,25 +65,24 @@ block content
                                 cite.quote__person-info
                                     .quote__person-name Сабанцев Владимир
                                     .quote__person-job преподаватель
-                .comment__form-wrapper 
-                    .comment__form.comment__form--works 
-                        .comment__form-title
-                            h3.title.title-smaller.comment__form-heading Связаться со мной
-                        form.contact-form
-                            label.visually-hidden(for="name") Имя
-                            input(type="text" placeholder="Имя" id="name").contact-form__input
-                            label.visually-hidden(for="email") Электронная почта
-                            input(type="email" placeholder="Email" id="email").contact-form__input
-                            label.visually-hidden(for="msg") Ваше сообщение
-                            textarea(type="textarea" placeholder="Ваше сообщение" id="msg").contact-form__input.contact-form__textarea
-                            .comment__form-btns
-                                button(type="submit").contact-form__btn.contact-form__btn--submit.reset-btn Отправить
-                                button(type="reset").contact-form__btn.contact-form__btn--reset.reset-btn Очистить
+                .comment__form.comment__form--works 
+                    .comment__form-title
+                         h3.title.title-smaller.comment__form-heading Связаться со мной
+                    form.contact-form
+                        label.visually-hidden(for="name") Имя
+                        input(type="text" placeholder="Имя" id="name").contact-form__input
+                        label.visually-hidden(for="email") Электронная почта
+                        input(type="email" placeholder="Email" id="email").contact-form__input
+                        label.visually-hidden(for="msg") Ваше сообщение
+                        textarea(type="textarea" placeholder="Ваше сообщение" id="msg").contact-form__input.contact-form__textarea
+                        .comment__form-btns
+                            button(type="submit").contact-form__btn.contact-form__btn--submit.reset-btn Отправить
+                            button(type="reset").contact-form__btn.contact-form__btn--reset.reset-btn Очистить
                     .comment__form-blur 
                 .comment__arrow-up
                     button.reset-btn.comment__arrow-btn
                         svg(class="comment__arrow-icon comment__arrow-icon--up" style={width: '100%', height: '30px'})
-                            use(class="comment__arrow-svg" xlink:href="../assets/images/sprite.svg#portf_arrow_up")
+                            use(class="comment__arrow-svg" xlink:href="/assets/images/sprite.svg#portf_arrow_up")
     include ../common/footer
     .fullscr-menu
         ul.nav-menu.fullscr-menu__list

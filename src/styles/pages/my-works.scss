@@ -207,6 +207,7 @@
 .section--comments {
     min-height: 1420px;
     background-image: url(../images/img/works.jpg);
+    position: relative;
     @extend %bgpicture;
 
     @include tablet {
@@ -396,7 +397,7 @@
 .comment__form-blur {
     background-image: url(../images/img/works.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center bottom;
     background-size: cover;
     filter: blur(20px);
     position: absolute;
@@ -411,17 +412,16 @@
     width: 380px;
     // background-color: rgba(#fff, .3);
     margin: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
     
     // padding: 40px 20px 20px;
 }
 
 .comment__form--works {
     position: relative;
-    z-index: 100;
-
-
-
-  
+    z-index: 1;
 
     @include tablet {
         margin-bottom: 80px;

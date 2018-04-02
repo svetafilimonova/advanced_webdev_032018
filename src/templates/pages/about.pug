@@ -15,7 +15,7 @@ block content
                 .about__col.about__col--left
                     .about__title
                         svg(class="about__title-icon" preserveAspectRatio="none" style={width: '358px', height: '125px'})
-                            use.about__title-svg(xlink:href='../assets/images/sprite.svg#about_header')
+                            use.about__title-svg(xlink:href='/assets/images/sprite.svg#about_header')
                         h1.title.title-bigger.title_dark.about__title-text Обо мне
                     .about__user-info
                         .about__avatar
@@ -53,7 +53,7 @@ block content
                             each item, indx in ["Svetlana.Filimonova.62", 'lana.shvedova@gmail.com', '+7 952 128 89 51', 'г.Рязань, ул.Кальная']
                                 li.contacts__item
                                     svg(class=`contacts__icon contacts__icon-${contactIcons[indx]}` style={width: '20px', height: '20px'})
-                                        use(class=`contacts__icon-svg` xlink:href=`../assets/images/sprite.svg#${contactIcons[indx]}`)
+                                        use(class=`contacts__icon-svg` xlink:href=`/assets/images/sprite.svg#${contactIcons[indx]}`)
                                     span.contacts__info=item
         include ../common/footer
     .fullscr-menu

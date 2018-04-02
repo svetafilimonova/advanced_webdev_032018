@@ -20,11 +20,11 @@ mixin header(pageName, header, text, iconName, arrow)
                             h2.welcome__info-title--smaller=text
                 .header__svg-wrapper
                     svg(class=`header__bg-icon header__bg-icon_${iconName}` preserveAspectRatio="none")
-                        use(class=`header__icon_${iconName}` xlink:href=`assets/images/sprite.svg#${iconName}`)
+                        use(class=`header__icon_${iconName}` xlink:href=`/assets/images/sprite.svg#${iconName}`)
             button.header__row.header__row-arrow.reset-btn
                 if arrow
                     svg(class="header__arrow-icon" style={width: '27px', height: '18px'})
-                        use(class="header__arrow-svg" xlink:href="../assets/images/sprite.svg#arrow_down")
+                        use(class="header__arrow-svg" xlink:href="/assets/images/sprite.svg#arrow_down")
             .header__row-triangles
                 svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class=`header__traingles header__traingles_${pageName}`)
                     polygon(class = `header__traingle-left header__traingle-left_${pageName}` points="0,0   0,86   500.8,86   500.8,75.5")

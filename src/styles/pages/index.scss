@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    position: relative;
     // justify-content: space-between;
 
 }
@@ -51,6 +52,8 @@
     justify-content: flex-end;
     flex-shrink: 0;
     padding: 50px 50px;
+    z-index: 10;
+    position: relative;
 
     @include phone {
         justify-content: center;
@@ -320,4 +323,37 @@
 
 .auth-form__button-main {
     border-right: 2px solid #73c8c0;
+}
+
+
+.parallax{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+
+
+    @include phone {
+       display: none; 
+    }
+
+
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    will-change: transform;
+}
+
+
+.parallax__img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }

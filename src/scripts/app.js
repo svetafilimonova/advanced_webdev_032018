@@ -6,12 +6,45 @@ const blogScrollInit = require('./common/blog-scroll');
 const flip = require('./common/flip');
 const blur = require('./common/blur');
 const parallaxScroll = require('./common/parallax-scroll.js');
+const parallax = require('./common/parallax');
 
 
 slider(); // инициализируем слайдер
-menu();
-navBlog();
-blogScrollInit();
-flip();
-blur.set();
-parallaxScroll.init();
+
+
+
+if($('.auth-btn').length) {
+    flip();
+}
+
+if($('.blog__nav-btn').length) {
+    navBlog();
+}
+
+if($('.header__parallax').length) {
+    parallaxScroll.init();
+}
+
+if($('.blog__main').length) {
+    blogScrollInit();
+}
+
+
+if($('.hamburger').length) {
+    menu();
+}
+
+if($('.comment__form--works').length) {
+
+    blur.set();
+
+    window.onresize = function () {
+        blur.set();
+    }
+}
+
+if($('.parallax').length) {
+    parallax();
+
+    
+}

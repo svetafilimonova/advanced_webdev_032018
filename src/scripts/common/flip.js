@@ -20,3 +20,4 @@ function flipInit() {
 
 
 module.exports = flipInit;
+
