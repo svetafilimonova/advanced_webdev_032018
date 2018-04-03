@@ -25,6 +25,6 @@ const parallax = function (e) {
 
 }
 
-window.addEventListener('mousemove', parallax);
+
 
 module.exports = parallax;

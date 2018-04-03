@@ -20,11 +20,33 @@ block content
                             svg(class="slider__arrow-icon slider__arrow-icon--left" style={width: '30px', height: '30px'})
                                 use(class="slider__arrow-svg" xlink:href="../assets/images/sprite.svg#portf_arrow_down")
                     ul.works__list
-                        li.works__item
+                        li.works__item.showing
                             .works__img(style={'background-image':'url("assets/images/img/work1.png")'})
                             .works__description
                                 .works__name
                                     h2.works__name-title Сайт школы онлайн Образования
+                                .works__technologies
+                                    span.works__technologies-text HTML, CSS, JavaScript
+                                .works__button
+                                    svg(class="slider__link-icon" style={width: '20px', height: '30px'})
+                                        use(class="slider__link-svg" xlink:href="/assets/images/sprite.svg#link")
+                                    a.works__link Посмотреть сайт
+                        li.works__item
+                            .works__img(style={'background-image':'url("assets/images/img/work1.png")'})
+                            .works__description
+                                .works__name
+                                    h2.works__name-title Работа 2
+                                .works__technologies
+                                    span.works__technologies-text HTML, CSS, JavaScript
+                                .works__button
+                                    svg(class="slider__link-icon" style={width: '20px', height: '30px'})
+                                        use(class="slider__link-svg" xlink:href="/assets/images/sprite.svg#link")
+                                    a.works__link Посмотреть сайт
+                        li.works__item
+                            .works__img(style={'background-image':'url("assets/images/img/work1.png")'})
+                            .works__description
+                                .works__name
+                                    h2.works__name-title Работа 3
                                 .works__technologies
                                     span.works__technologies-text HTML, CSS, JavaScript
                                 .works__button
@@ -36,10 +58,10 @@ block content
                             svg(class="slider__arrow-icon slider__arrow-icon--right" style={width: '30px', height: '30px'})
                                 use(class="slider__arrow-svg" xlink:href="/assets/images/sprite.svg#portf_arrow_up")
                     ul.nav-dots
-                        li.nav-dots__item.nav-dots__item--active 
-                        li.nav-dots__item
-                        li.nav-dots__item
-                        li.nav-dots__item
+                        //- li.nav-dots__item.nav-dots__item--active 
+                        //- li.nav-dots__item
+                        //- li.nav-dots__item
+                        //- li.nav-dots__item
             section.section.comments.section--comments
                 .comments__title.comments__title--works
                     svg(class="comments__title-icon" preserveAspectRatio="none" style={width: '100%'})

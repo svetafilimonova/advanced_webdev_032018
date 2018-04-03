@@ -44,7 +44,5 @@ if($('.comment__form--works').length) {
 }
 
 if($('.parallax').length) {
-    parallax();
-
-    
+    window.addEventListener('mousemove', parallax);
 }
