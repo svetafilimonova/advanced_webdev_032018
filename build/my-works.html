@@ -174,13 +174,15 @@
             <div class="comment__form-title">
               <h3 class="title title-smaller comment__form-heading">Связаться со мной</h3>
             </div>
+            <div class="comment__form-error hidden">Ошибка!</div>
+            <div class="comment__form-succsess hidden">Форма успешно отправлена</div>
             <form class="contact-form">
               <label class="visually-hidden" for="name">Имя</label>
-              <input class="contact-form__input" type="text" placeholder="Имя" id="name">
+              <input class="contact-form__input" type="text" placeholder="Имя" id="name" data-validation="required name">
               <label class="visually-hidden" for="email">Электронная почта</label>
-              <input class="contact-form__input" type="email" placeholder="Email" id="email">
+              <input class="contact-form__input" type="email" placeholder="Email" id="email" data-validation="required mail">
               <label class="visually-hidden" for="msg">Ваше сообщение</label>
-              <textarea class="contact-form__input contact-form__textarea" type="textarea" placeholder="Ваше сообщение" id="msg"></textarea>
+              <textarea class="contact-form__input contact-form__textarea" type="textarea" placeholder="Ваше сообщение" id="msg" data-validation="required message"></textarea>
               <div class="comment__form-btns">
                 <button class="contact-form__btn contact-form__btn--submit reset-btn" type="submit">Отправить</button>
                 <button class="contact-form__btn contact-form__btn--reset reset-btn" type="reset">Очистить</button>

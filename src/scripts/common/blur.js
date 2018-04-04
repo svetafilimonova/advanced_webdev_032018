@@ -1,4 +1,4 @@
-const $ = require('jquery');
+
 
 
     var blur = (function(){

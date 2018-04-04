@@ -470,6 +470,10 @@
     margin-bottom: 20px;
     border-radius: 5px;
     padding: 10px 15px;
+
+    &.error {
+        border: 1px solid rgb(240, 82, 82);
+    }
 }
 
 ::-webkit-input-placeholder {
@@ -525,3 +529,30 @@
 .comment__arrow-icon--up {
     fill: rgba(#fff, .5);
 }
+
+
+.comment__form-error {
+    background-color: rgba(251, 183, 183, 0.3);
+    color: rgb(240, 82, 82);
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid rgb(240, 82, 82);
+    padding: 10px 15px;
+    margin: 0 auto;
+}
+
+
+.comment__form-succsess {
+    background-color: rgba(#c0eee9, .5);
+    color: $seagreen;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid $seagreen;
+    padding: 10px 15px;
+    margin: 10px auto;
+}
+
+.hidden {
+    display: none;
+}
+

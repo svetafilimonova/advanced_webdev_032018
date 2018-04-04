@@ -7,6 +7,7 @@ const flip = require('./common/flip');
 const blur = require('./common/blur');
 const parallaxScroll = require('./common/parallax-scroll.js');
 const parallax = require('./common/parallax');
+const worksForm = require('./common/works-validation');
 
 
 slider(); // инициализируем слайдер
@@ -45,4 +46,8 @@ if($('.comment__form--works').length) {
 
 if($('.parallax').length) {
     window.addEventListener('mousemove', parallax);
+}
+
+if($('.comment__form--works ').length) {
+    worksForm();
 }
