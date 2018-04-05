@@ -86,15 +86,17 @@ block content
                 .comment__form.comment__form--works 
                     .comment__form-title
                          h3.title.title-smaller.comment__form-heading Связаться со мной
-                    .comment__form-error.hidden Ошибка!
                     .comment__form-succsess.hidden Форма успешно отправлена
-                    form.contact-form
-                        label.visually-hidden(for="name") Имя
-                        input(type="text" placeholder="Имя" id="name"  data-validation="required name").contact-form__input
-                        label.visually-hidden(for="email") Электронная почта
-                        input(type="email" placeholder="Email" id="email"  data-validation="required mail").contact-form__input
-                        label.visually-hidden(for="msg") Ваше сообщение
-                        textarea(type="textarea" placeholder="Ваше сообщение" id="msg"  data-validation="required message").contact-form__input.contact-form__textarea
+                    form.contact-form(name="myform")
+                        .contact-form__row
+                            label.visually-hidden(for="name") Имя
+                            input(type="text" placeholder="Имя" id="name"  name="Name").contact-form__input
+                        .contact-form__row
+                            label.visually-hidden(for="email") Электронная почта
+                            input(type="email" placeholder="Email" id="email" name="email").contact-form__input
+                        .contact-form__row
+                            label.visually-hidden(for="msg") Ваше сообщение
+                            textarea(type="textarea" placeholder="Ваше сообщение" name="message" id="msg").contact-form__input.contact-form__textarea
                         .comment__form-btns
                             button(type="submit").contact-form__btn.contact-form__btn--submit.reset-btn Отправить
                             button(type="reset").contact-form__btn.contact-form__btn--reset.reset-btn Очистить
