@@ -48,7 +48,7 @@ block content
                 .intro__flip.intro__flip-back
                     .welcome.welcome-auth
                         .title.title-smaller.welcome-auth__title Авторизуйтесь
-                        form.auth-form(action="#")
+                        form.auth-form(action="#" id="authorization")
                             .auth-form__row
                                 label.auth-form__label(for="login")
                                     span.visually-hidden Логин
@@ -82,7 +82,7 @@ block content
                                             .auth-form__text.auth-form__radio-text Не уверен
                     .back__buttons-wrapper
                         button(type="button").auth-form__button.auth-form__button-main.reset-btn На главную
-                        button(type="submit").auth-form__button.auth-form__button-login.reset-btn Войти
+                        button(type="submit" form="authorization").auth-form__button.auth-form__button-login.reset-btn Войти
     footer.footer.intro-footer
         .container.container--footer-intro
             .footer__copyright

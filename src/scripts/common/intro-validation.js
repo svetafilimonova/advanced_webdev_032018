@@ -23,7 +23,7 @@ const parent = document.querySelector('.auth-form__row');
 
 
       function introValidation () {
-    submitBtn.addEventListener('click', function(e){
+        introForm.addEventListener('submit', function(e){
  
       resetError(login, login.closest(".auth-form__row"));
       if (!login.value) {
