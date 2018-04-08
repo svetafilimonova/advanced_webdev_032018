@@ -1,13 +1,14 @@
 const $ = require('jquery');
 
-function blogScrollInit () {
+const blogScrollInit = (function() {
+    
+return {
 
-    console.log("blog");
-
-    var elem = document.querySelector('.blog__main');
-    var texts = document.querySelectorAll('.articles__text');
-    var links = document.querySelectorAll('.blog-nav__item');
-    var textsOffset = [];
+    init: function() {
+        const elem = document.querySelector('.blog__main');
+    const texts = document.querySelectorAll('.articles__text');
+    const links = document.querySelectorAll('.blog-nav__item');
+    const textsOffset = [];
     
     texts.forEach(function(text){
         textsOffset.push(text.offsetTop);	
@@ -25,8 +26,10 @@ function blogScrollInit () {
       })
     })
 
-
-};
+    }
+}
+    
+}());
 
 
 

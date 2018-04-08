@@ -2,6 +2,8 @@ const $ = require('jquery');
 
 
 const parallaxScroll = (function () {
+
+
     const bg = document.querySelector(".header__parallax");
     const user = document.querySelector(".header__welcome");
     const svgText = document.querySelector(".header__svg-wrapper");
@@ -29,7 +31,6 @@ const parallaxScroll = (function () {
         }
     }
 
-    console.log("hello from parallax")
 
 })()
 
@@ -39,10 +40,6 @@ window.onscroll = function () {
 
     parallaxScroll.init(wScroll);
 }
-
-
-
-console.log("hello from parallax")
 
 
 

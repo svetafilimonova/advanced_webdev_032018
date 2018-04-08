@@ -231,6 +231,7 @@
     background-image: url(../images/img/works.jpg);
     position: relative;
     @extend %bgpicture;
+    padding-bottom: 350px;
 
     @include tablet {
         min-height: 1350px;
@@ -444,6 +445,7 @@
 .comment__form--works {
     position: relative;
     z-index: 1;
+    margin-bottom: 50px;
 
     @include tablet {
         margin-bottom: 80px;

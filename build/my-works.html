@@ -8,10 +8,17 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/styles/app.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEihv8-vasPvzAdfj6PLkeXL_12u-9m28&amp;callback=initMap" defer></script>
     <script src="assets/scripts/bundle.js" defer></script>
   </head>
   <body>
     <div class="wrapper-pages wrapper-pages--about">
+      <div class="preloader">
+        <div class="preloader__spinner">
+          <div class="preloader__animation"></div>
+          <div class="preloader__percents">0%</div>
+        </div>
+      </div>
       <div class="p-container">
         <section class="header">
           <div class="header__parallax"><img class="header__parallax-img" src="assets/images/img/header.jpg" alt=""/></div>

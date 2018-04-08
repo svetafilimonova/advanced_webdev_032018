@@ -193,9 +193,11 @@
     justify-content: center;
     display: flex;
     transform: translateY(-104%);
-    transition: 1s transform;
+    transition: 1s all;
+    opacity: 0;
     &.active {
         transform: translateY(0%);
+        opacity: 1;
     }
 }
 

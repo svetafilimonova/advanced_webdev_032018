@@ -9,6 +9,10 @@ block variables
 
 block content
     .wrapper-pages.wrapper-pages--about
+        .preloader
+            .preloader__spinner
+                .preloader__animation
+                .preloader__percents 0%
         .p-container
             +header("about", "Светлана Филимонова", "Личный сайт веб разработчика", 'portfolio_header', true)
             section.about.section--about
@@ -45,7 +49,7 @@ block content
                                                     r="50" cx="61" cy="61" stroke="#00bfa5" fill="none" transform="rotate(-90 61 61)")
                                                 span.skills-row__item-text= skill
             section.map.section_map
-                    .map__google-map
+                    .map__google-map(id="map")
                     .contacts
                         .contacts__heading
                             h2.title.title-smaller.title_dark Контакты
@@ -64,5 +68,6 @@ block content
     button.reset-btn.hamburger
         .hamburger__menu
             .hamburger__btn
+ 
    
     
