@@ -66,7 +66,7 @@ if($('.comment__form--works').length) {
 
 
 if($('.auth-form').length) {
-    introForm();
+    introForm.init();
 }
 
 
